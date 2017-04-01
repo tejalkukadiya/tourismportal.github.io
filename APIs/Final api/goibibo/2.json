@@ -1,0 +1,370 @@
+http://api.openweathermap.org/data/2.5/forecast?q=London%2Cuk&cnt=6&units=metric&mode=json&appid=79b8bacc3f81462c88dcc307c2674f5a
+array(5) {
+  ["cod"]=>
+  string(3) "200"
+  ["message"]=>
+  float(0.0067)
+  ["cnt"]=>
+  int(6)
+  ["list"]=>
+  array(6) {
+    [0]=>
+    array(7) {
+      ["dt"]=>
+      int(1490648400)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(6.16)
+        ["temp_min"]=>
+        float(6.16)
+        ["temp_max"]=>
+        float(8.81)
+        ["pressure"]=>
+        float(1026.03)
+        ["sea_level"]=>
+        float(1033.7)
+        ["grnd_level"]=>
+        float(1026.03)
+        ["humidity"]=>
+        int(78)
+        ["temp_kf"]=>
+        float(-2.65)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(800)
+          ["main"]=>
+          string(5) "Clear"
+          ["description"]=>
+          string(9) "clear sky"
+          ["icon"]=>
+          string(3) "01n"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(0)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(2.76)
+        ["deg"]=>
+        float(103.006)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "n"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-27 21:00:00"
+    }
+    [1]=>
+    array(7) {
+      ["dt"]=>
+      int(1490659200)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(2.61)
+        ["temp_min"]=>
+        float(2.61)
+        ["temp_max"]=>
+        float(4.59)
+        ["pressure"]=>
+        float(1025.4)
+        ["sea_level"]=>
+        float(1033.14)
+        ["grnd_level"]=>
+        float(1025.4)
+        ["humidity"]=>
+        int(93)
+        ["temp_kf"]=>
+        float(-1.99)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(800)
+          ["main"]=>
+          string(5) "Clear"
+          ["description"]=>
+          string(9) "clear sky"
+          ["icon"]=>
+          string(3) "01n"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(0)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(1.22)
+        ["deg"]=>
+        float(76.0021)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "n"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-28 00:00:00"
+    }
+    [2]=>
+    array(7) {
+      ["dt"]=>
+      int(1490670000)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(1.99)
+        ["temp_min"]=>
+        float(1.99)
+        ["temp_max"]=>
+        float(3.32)
+        ["pressure"]=>
+        float(1024.54)
+        ["sea_level"]=>
+        float(1032.39)
+        ["grnd_level"]=>
+        float(1024.54)
+        ["humidity"]=>
+        int(87)
+        ["temp_kf"]=>
+        float(-1.32)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(800)
+          ["main"]=>
+          string(5) "Clear"
+          ["description"]=>
+          string(9) "clear sky"
+          ["icon"]=>
+          string(3) "02n"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(8)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(1.16)
+        ["deg"]=>
+        int(103)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "n"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-28 03:00:00"
+    }
+    [3]=>
+    array(7) {
+      ["dt"]=>
+      int(1490680800)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(3.86)
+        ["temp_min"]=>
+        float(3.86)
+        ["temp_max"]=>
+        float(4.52)
+        ["pressure"]=>
+        float(1024.33)
+        ["sea_level"]=>
+        float(1032.16)
+        ["grnd_level"]=>
+        float(1024.33)
+        ["humidity"]=>
+        int(93)
+        ["temp_kf"]=>
+        float(-0.66)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(800)
+          ["main"]=>
+          string(5) "Clear"
+          ["description"]=>
+          string(9) "clear sky"
+          ["icon"]=>
+          string(3) "01d"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(0)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(2.21)
+        ["deg"]=>
+        float(148.001)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "d"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-28 06:00:00"
+    }
+    [4]=>
+    array(7) {
+      ["dt"]=>
+      int(1490691600)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(12.46)
+        ["temp_min"]=>
+        float(12.46)
+        ["temp_max"]=>
+        float(12.46)
+        ["pressure"]=>
+        float(1024.99)
+        ["sea_level"]=>
+        float(1032.66)
+        ["grnd_level"]=>
+        float(1024.99)
+        ["humidity"]=>
+        int(67)
+        ["temp_kf"]=>
+        int(0)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(800)
+          ["main"]=>
+          string(5) "Clear"
+          ["description"]=>
+          string(9) "clear sky"
+          ["icon"]=>
+          string(3) "02d"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(8)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(2.97)
+        ["deg"]=>
+        float(200.003)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "d"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-28 09:00:00"
+    }
+    [5]=>
+    array(7) {
+      ["dt"]=>
+      int(1490702400)
+      ["main"]=>
+      array(8) {
+        ["temp"]=>
+        float(14.35)
+        ["temp_min"]=>
+        float(14.35)
+        ["temp_max"]=>
+        float(14.35)
+        ["pressure"]=>
+        float(1025.23)
+        ["sea_level"]=>
+        float(1032.85)
+        ["grnd_level"]=>
+        float(1025.23)
+        ["humidity"]=>
+        int(61)
+        ["temp_kf"]=>
+        int(0)
+      }
+      ["weather"]=>
+      array(1) {
+        [0]=>
+        array(4) {
+          ["id"]=>
+          int(804)
+          ["main"]=>
+          string(6) "Clouds"
+          ["description"]=>
+          string(15) "overcast clouds"
+          ["icon"]=>
+          string(3) "04d"
+        }
+      }
+      ["clouds"]=>
+      array(1) {
+        ["all"]=>
+        int(88)
+      }
+      ["wind"]=>
+      array(2) {
+        ["speed"]=>
+        float(4.82)
+        ["deg"]=>
+        float(206.501)
+      }
+      ["sys"]=>
+      array(1) {
+        ["pod"]=>
+        string(1) "d"
+      }
+      ["dt_txt"]=>
+      string(19) "2017-03-28 12:00:00"
+    }
+  }
+  ["city"]=>
+  array(4) {
+    ["id"]=>
+    int(2643743)
+    ["name"]=>
+    string(6) "London"
+    ["coord"]=>
+    array(2) {
+      ["lat"]=>
+      float(51.5085)
+      ["lon"]=>
+      float(-0.1258)
+    }
+    ["country"]=>
+    string(2) "GB"
+  }
+}

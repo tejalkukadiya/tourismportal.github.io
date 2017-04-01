@@ -1,0 +1,80 @@
+<script src="https://gist.github.com/tbranyen/62d974681dea8ee0caa1.js"></script>
+
+
+
+api.openweathermap.org/data/2.5/weather?q=ahmedabad&cnt=6&units=metric&mode=json&appid=79b8bacc3f81462c88dcc307c2674f5a
+array(12) {
+  ["coord"]=>
+  array(2) {
+    ["lon"]=>
+    float(72.62)
+    ["lat"]=>
+    float(23.03)
+  }
+  ["weather"]=>
+  array(1) {
+    [0]=>
+    array(4) {
+      ["id"]=>
+      int(711)
+      ["main"]=>
+      string(5) "Smoke"
+      ["description"]=>
+      string(5) "smoke"
+      ["icon"]=>
+      string(3) "50n"
+    }
+  }
+  ["base"]=>
+  string(8) "stations"
+  ["main"]=>
+  array(5) {
+    ["temp"]=>
+    int(31)
+    ["pressure"]=>
+    int(1011)
+    ["humidity"]=>
+    int(22)
+    ["temp_min"]=>
+    int(31)
+    ["temp_max"]=>
+    int(31)
+  }
+  ["visibility"]=>
+  int(4000)
+  ["wind"]=>
+  array(2) {
+    ["speed"]=>
+    float(3.86)
+    ["deg"]=>
+    float(292.51)
+  }
+  ["clouds"]=>
+  array(1) {
+    ["all"]=>
+    int(0)
+  }
+  ["dt"]=>
+  int(1490729400)
+  ["sys"]=>
+  array(6) {
+    ["type"]=>
+    int(1)
+    ["id"]=>
+    int(7758)
+    ["message"]=>
+    float(0.0021)
+    ["country"]=>
+    string(2) "IN"
+    ["sunrise"]=>
+    int(1490663106)
+    ["sunset"]=>
+    int(1490707431)
+  }
+  ["id"]=>
+  int(1279233)
+  ["name"]=>
+  string(9) "Ahmadabad"
+  ["cod"]=>
+  int(200)
+}

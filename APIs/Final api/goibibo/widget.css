@@ -1,0 +1,52 @@
+
+.weather {
+    text-transform: capitalize;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 14px;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+}
+
+
+.weather h3 {
+    margin: 10px 0;
+}
+.weather .temp {
+    background: rgba(255,255,255,0.8);
+    padding: 20px 0 0 0;
+}
+.weather .temp img{
+	
+padding: 0;
+	
+margin: 0;
+}
+.weather .temp h3{
+	
+margin: 0;
+	
+padding: 0;
+	
+font-size: 32px;
+}
+.weather .temp p {
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.weather .other{text-align: center;padding: 16PX;text-transform: capitalize;}
+
+.weather .other h3 {
+
+margin: 0;
+
+padding: 0;
+
+font-size: 14px;
+
+line-height: 22px;
+}
