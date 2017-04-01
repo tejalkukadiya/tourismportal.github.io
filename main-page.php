@@ -525,58 +525,7 @@
 						</div>
 					</center>
 
-					<div class="views animated fadeInRight">
-						<h2>quotes</h2>
-						
-						<div class="view-data row">
-							<div  class="col-md-4">
-								<img src="img/team/1.jpg">
-								
-							</div>
-							<div class="col-md-8 quote">
-								<i class="fa fa-caret-left" ></i>
-								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-								</p>
-							</div>
-						</div>
-						<div class="view-data row">
-							<div class="col-md-8 quote1">
-								<i class="fa fa-caret-right" ></i>
-								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-								</p>
-							</div>
-							<div  class="col-md-4">
-								<img src="img/team/2.jpg">
-								
-							</div>
-						</div>
-						<div class="view-data row">
-							<div  class="col-md-4">
-								<img src="img/team/3.jpg">
-								
-							</div>
-							<div class="col-md-8 quote">
-								<i class="fa fa-caret-left" ></i>
-								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-								</p>
-							</div>
-						</div>
-						<div class="view-data row">
-							<div class="col-md-8 quote1">
-								<i class="fa fa-caret-right" ></i>
-								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-								</p>
-							</div>
-							<div  class="col-md-4">
-								<img src="img/team/4.jpg">	
-							</div>
-						</div>
-					</div>
-
+					
 			</div>
 					<?php 		
 							include 'Connection.php';
@@ -635,6 +584,60 @@
 				
 			</div>
 		</div>
+
+		<div class="views container animated fadeInRight">
+						<center><h2>Quotes</h2></center>
+						
+						<div class="view-data row">
+							<div  class="col-md-4">
+								<img src="img/team/1.jpg">
+								
+							</div>
+							<div class="col-md-8 quote">
+								<i class="fa fa-caret-left" ></i>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+						</div>
+						<div class="view-data row">
+							<div class="col-md-8 quote1">
+								<i class="fa fa-caret-right" ></i>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+							<div  class="col-md-4">
+								<img src="img/team/2.jpg">
+								
+							</div>
+						</div>
+						<div class="view-data row">
+							<div  class="col-md-4">
+								<img src="img/team/3.jpg">
+								
+							</div>
+							<div class="col-md-8 quote">
+								<i class="fa fa-caret-left" ></i>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+						</div>
+						<div class="view-data  row">
+							<div class="col-md-8 quote1">
+								<i class="fa fa-caret-right" ></i>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+							<div  class="col-md-4">
+								<img src="img/team/4.jpg">	
+							</div>
+						</div>
+					</div>
+
+
 		<center><h3>Weather Casts</h3></center>
 		<hr>
 		<div class="row w-cast">
@@ -666,7 +669,7 @@
 				</div>
 					
 				</div>
-				
+
 			<div class="counter">
 				<h1><?php echo $cnt; ?></h1>
 			</div>

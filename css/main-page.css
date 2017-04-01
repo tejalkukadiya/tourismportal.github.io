@@ -543,7 +543,7 @@ font-size: 30px;
 #famous-for {
   margin: 20px 0;
 }
-.views {margin: 40px 10px;overflow: hidden;}
+.views {/* margin: 40px 10px; */overflow: hidden;}
 .views h2{
 font-size: 32px;
 margin: 20px 0;
@@ -558,9 +558,9 @@ vertical-align: middle;
 }
 .view-data .quote i{
       float: left;
-      padding-top: 65px;
+      padding-top: 54px;
       font-size: 44px;
-      margin-left: -14px;
+      margin-left: -15px;
       color: gray;
 }
 .view-data .quote1 i{
