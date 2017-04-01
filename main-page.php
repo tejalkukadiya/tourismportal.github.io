@@ -96,7 +96,7 @@
 
 
 
-					
+
 						var index =1;
 	function setindex(n)
 	{
@@ -143,6 +143,7 @@
 
 					</script>
 					
+		<link rel="stylesheet" type="text/css" href="APIs/widget/widget.css">
 
 </head>
 	
@@ -439,12 +440,13 @@
 								
 									
 									<p >
-									Jdsdsdsdfdssfegddgdgdsfack White - Manager
-							Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo facilis est et expedita distinctio minus id quod maxime placeat facere possimus.<br/><br/>
+									Imagine a place-mystique, mysterious and vibrant. Framed by mighty mountains, gentle hills. Home to sparkling rivers, sacred lakes. Strewn with exotic flowers and amazing animals. Imagine the people-gentle, graceful, welcoming and one with nature, keeping alive their rich heritage. Imagine paradise unexplored. Welcome to the wonderland that is the north east of India. They are called the seven sisters and then Sikkim. Each more beautiful with distinct characteristics. Together, a kaleidoscope of magical imagery, challenging adventure and an enriching experience. <br/><br/>
 
-							Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.<br/><br/>
+							Shillong - the Scotland of the north east. Tagore used the setting for arguably his most romantic novel. Quaint, unhurried. Set amid smoky blue mountains thick with pine trees and orchids, singing brooks, scenic lakeside views, crashing waterfalls. Sprawling tea estates-even, harmonious, green. The region produces some of the best teas in the world. Assam-the tea country. A drive or a walk through the silent acres of plush green is a soothing sign. The centuries-old tea bungalows of Assam, reminiscent of a romantic lifestyle fostered by the splendid isolation of the prosperous tea estates. <br/><br/>
+							
 
-							Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>
+							Resplendent in the glow of the evening sun, the Kanchenjunga looks down benignly. There is a mystic hush. Pemayangtse in east Sikkim-the oldest and the holiest of all gompas in the state. Home to priceless artifacts of Mahayana Buddhism. Sikkim-unique, mystical, the land of Buddhist monasteries. Almost 200 gompas dot the tiny state. The most significant monastery in the state-the picturesque Rumtek-the seat of the Karmapas. A recreation of the Tsurphu monastery in Tibet-their original seat. 
+							<br/><br/>
 							</p>
 							<div class="arrow">
 									<button onclick="setindex1(-1)"><i class="fa fa-angle-left"></i></button>
@@ -461,12 +463,15 @@
 								
 									
 									<p>
-									Jdsdsdsdfddssxxxaxssfegddgdgdsfack White - Manager
-							Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo facilis est et expedita distinctio minus id quod maxime placeat facere possimus.<br/><br/>
+									Tripura, a royal feast, dotted with magnificent palaces, spectacular in their indulgence. Invoking the spirit of a romantic heritage. The magnificent Ujjayanta Palace set amidst sprawling gardens in the Mughal style, a crowning glory of Agartala. The Neer Mahal incandescent, opulent, romantic, rising in the middle of a natural lake-Rudrasagar.<br/><br/>
 
-							Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.<br/><br/>
+									High up in the Himalayas, across snow covered passes, forever in a clouded haze that heightens its mystic density. 400 year old fortress monastery of Tawang. A gigantic 10 meter statue of the Buddha exuding spirituality and peace. 
+									<br/><br/>
 
-							Voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.<br/><br/>
+
+									Kamakhya temple in Guwahati, Assam, located on the Nilachal Parvat. The temple dedicated to the mother goddess-one of the 51 holy spots in Hinduism-Kamakhya. It houses a sculptured image of the yoni of the goddess-symbolic of life and its perpetuation-the object of reverence.<br/><br/>
+
+									A unique feature of the Namdapha national park in Arunachal Pradesh is that it is the only park in the world where four of the great felines are found-tiger, leopard, snow leopard and clouded leopard. The north east is inhabited by fabulous people, scantily populated, yet its ethnic diversity is unparalleled.<br/><br/>
 							</p>
 							<div class="arrow">
 									<button onclick="setindex1(-1)"><i class="fa fa-angle-left"></i></button>
@@ -491,31 +496,31 @@
 							<h3>Famous Places</h3>
 						</div>
 						<div class="row" id="famous-for">
-							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+							<div class="col-md-4" >
+								<div class="famous-card" style="background:url(img/famousplace/Cherapunji.jpg)"></div>
+								<center><h4 class="cap">Cherapunji</h4></center>
 							</div>
 							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+								<div class="famous-card" style="background:url(img/famousplace/Dzouku-Valley.jpg)"></div>
+								<center><h4 class="cap">Dzouku-Valley</h4></center>
 							</div>
 							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+								<div class="famous-card" style="background:url(img/famousplace/Majuli1.jpg)"></div>
+								<center><h4 class="cap">Majuli</h4></center>
 							</div>
 						</div>
 						<div class="row" id="famous-for">
 							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+								<div class="famous-card" style="background:url(img/famousplace/Mokokchung.jpg)"></div>
+								<center><h4 class="cap">Mokokchung</h4></center>
 							</div>
 							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+								<div class="famous-card" style="background:url(img/famousplace/pelling-kanchendzonga.jpg)"></div>
+								<center><h4 class="cap">Pelling-kanchen dzonga</h4></center>
 							</div>
 							<div class="col-md-4">
-								<div class="famous-card"></div>
-								<center><h4 class="cap">wsdrdj</h4></center>
+								<div class="famous-card" style="background:url(img/famousplace/TAWANG.jpg)"></div>
+								<center><h4 class="cap">Tawang</h4></center>
 							</div>
 						</div>
 					</center>
@@ -587,7 +592,7 @@
 
 					<h2>News Updates</h2>
 
-					<div class="holder">
+					<div class="holder hidden">
   						<ul id="ticker01">
 							<li><span>10/10/2007</span><a href="#">The first thing that most Javascript programmers</a></li>
 							<li><span>10/10/2007</span><a href="#">End up doing is adding some code</a></li>
@@ -623,11 +628,45 @@
 					</marquee>
 
 
-					</P>
+					
 
 				</div>
+
+				
 			</div>
 		</div>
+		<center><h3>Weather Casts</h3></center>
+		<hr>
+		<div class="row w-cast">
+				<div class="col-md-3 weather" id="assam-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="ap-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="mz-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="mg-weather">
+					
+				</div>
+				</div>
+				<div class="row w-cast">
+				<div class="col-md-3 weather" id="mp-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="sk-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="tr-weather">
+					
+				</div>
+				<div class="col-md-3 weather" id="nl-weather">
+					
+				</div>
+					
+				</div>
+				
 			<div class="counter">
 				<h1><?php echo $cnt; ?></h1>
 			</div>
@@ -691,10 +730,109 @@
 					$("#preloader").fadeOut("slow");
 
 					});
+</script>
+					<script type="text/javascript">
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'dispur'  },
+         cache: false,
+         success: function (response) {
+             $('#assam-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'agartala'  },
+         cache: false,
+         success: function (response) {
+             $('#tr-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'Aizawl'  },
+         cache: false,
+         success: function (response) {
+             $('#mz-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'itanagar'  },
+         cache: false,
+         success: function (response) {
+             $('#ap-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'Gangtok'  },
+         cache: false,
+         success: function (response) {
+             $('#sk-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'imphal'  },
+         cache: false,
+         success: function (response) {
+             $('#mp-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'kohima'  },
+         cache: false,
+         success: function (response) {
+             $('#nl-weather').html(response);
+         }
+     });
+		
+	});
+	$(document).ready(function () {
+	$.ajax({
+         url: "APIs/widget/weather fetch.php",
+         type: "POST",
+         data: { city:'shillong'  },
+         cache: false,
+         success: function (response) {
+             $('#mg-weather').html(response);
+         }
+     });
+		
+	});
 
 
-	</script>
-	
+</script>
+
+
 	
 	
 </body>

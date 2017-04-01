@@ -363,7 +363,7 @@ background-color: rgba(0,0,0,0.6);
   background-color: dodgerblue;
 }
 .hometxt .center-txt
-{padding: 0px 296px;}
+{padding: 0px 364px;}
 .hometxt .left-arrow{
   float: left;
 }
@@ -535,9 +535,10 @@ font-size: 30px;
   vertical-align: bottom;
   bottom: 0px;
   word-wrap: break-word;
-  margin-top: -19px;
+  margin-top: -40px;
   width: 100%;
-  display: block; 
+  display: block;
+  padding: 10px 0;
 }
 #famous-for {
   margin: 20px 0;
