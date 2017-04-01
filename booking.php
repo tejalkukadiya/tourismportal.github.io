@@ -19,13 +19,13 @@
     <link rel="stylesheet" type="text/css" href="css/theme.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/map.css">
-  <link rel="stylesheet" type="text/css" href="css/booking.css">
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <link rel="stylesheet" href="css/jquery-ui.min.css">
   <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="css/booking.css">
   <script src="js/jquery-ui.min.js"></script>
   <script>
   $(document).ready( function() {
@@ -231,10 +231,10 @@
               <div class="result hidden" ></div>
              </div>
           </div>
-          <div class="input-group row date" >
+          <div class="row date" >
           
               <input placeholder="Departing" class="form-control col-md-6" type="text" id="datepicker" name="dateofdeparture">
-              <input placeholder="Returning" class="form-control col-md-6" type="text" id="datepicker2" name="returndate" disabled="disabled">
+              <input placeholder="Returning" class="form-control col-md-6" type="text" id="datepicker2" name="returndate" disabled="disabled" style="float: right;">
            
           </div>
            

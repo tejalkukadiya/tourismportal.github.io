@@ -81,24 +81,24 @@
 
 	</style>
 					
-					<script src="js/jquery-1.11.1.min.js"></script>
-					<!-- <script src="js/jquery.min.js"></script> -->
-					<script src="js/bootstrap.min.js"></script>
-					<script src="js/animate.js"></script>
-					<script src="js/main.js"></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/main.js"></script>
 
-					<script type="text/javascript">
-						$(window).load(function(){
+	<script type="text/javascript">
+	$(window).load(function(){
     $("#hornav").sticky({ topSpacing: 90 });
   });
-  $(window).load(function(){
+  	$(window).load(function(){
     $("#header").sticky({ topSpacing: 0 });
   });
 
 
 
 
-						var index =1;
+	var index =1;
 	function setindex(n)
 	{
 		index=index+n;
@@ -142,8 +142,108 @@
 	}
 
 
-					</script>
-					
+	</script>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcu_TGU3Njo4D6xzC1v_ZpQr6avCtEGE&libraries=places&callback=initMap" async defer></script>	
+	<script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+	
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map1'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom:15
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+         map = new google.maps.Map(document.getElementById('map1'), {
+          center: pos,
+          zoom: 15
+        });
+
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pos,
+          radius: 15000,
+          type: ['train_station']
+        }, processResults);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function processResults(results, status, pagination) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK) {
+          return;
+        } else {
+          createMarkers(results);
+
+          if (pagination.hasNextPage) {
+            var moreButton = document.getElementById('more');
+
+            moreButton.disabled = false;
+
+            moreButton.addEventListener('click', function() {
+              moreButton.disabled = true;
+              pagination.nextPage();
+            });
+          }
+        }
+      }
+      function createMarkers(places) {
+        var bounds = new google.maps.LatLngBounds();
+        var placesList = document.getElementById('places');
+
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
+
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
+          });
+
+          placesList.innerHTML += '<li>' + place.name +'</br>'+ place.vicinity +'</li>';
+
+          bounds.extend(place.geometry.location);
+        }
+        map.fitBounds(bounds);
+      }
+
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+
+
+    </script>
+				
 		<link rel="stylesheet" type="text/css" href="APIs/widget/widget.css">
 
 </head>
@@ -641,7 +741,18 @@
 						</div>
 					</div>
 
-
+	<div class="row train-search">
+		<div id="right-panel " class="col-md-6 right-panel">
+		  <h2>Near By Train Station</h2>
+		  <ul id="places" class="places"></ul>
+		  <button id="more" class="more">More results</button>
+		</div>
+		<div class="col-md-6 train-map">
+			<div id="map1" class="map1"></div>
+		</div>
+  </div>
+  			<div class="weather-widgets">
+  				
 		<center><h3>Weather Casts</h3></center>
 		<hr>
 		<div class="row w-cast">
@@ -672,7 +783,8 @@
 					
 				</div>
 					
-				</div>
+  				</div>
+		</div>
 
 				
 			

@@ -90,7 +90,7 @@ table {
 }
 .result{
   margin-top: 32px;
-  z-index: 999;
+  z-index:1;
   text-align: center;
   position: absolute;
   background: white;
@@ -105,7 +105,7 @@ table {
 }
 
 .search-box-1 .result{
-  z-index: 1000;
+  z-index: 1;
 }
 .result p,.result1 p{
   
@@ -115,9 +115,17 @@ margin: 0;
 
 .date{
 
+text-align: center;
+
+margin: 0;
+
+padding: 0 25px;
 }
 .date >input{
 
+width: auto;
+
+margin-bottom: 10px;
 }
 .scout {
     font-size: 24px;
@@ -337,4 +345,8 @@ color: black;
 
 .from-to {
   margin: 20px;
+}
+
+.search-box .form-control,.search-box-1 .form-control{
+  z-index: 0 !important;
 }
