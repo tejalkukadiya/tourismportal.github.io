@@ -3,7 +3,7 @@
 <?php
 	session_start();
 	$userId=$_SESSION["username"];
-		include '../Connection.php';
+		include 'Connection.php';
 		
 				
 		$res = $conn->query("select * from agent where agentId = '$userId'");
@@ -83,23 +83,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="assests/fileinput.min.js"></script>
    <script src="assests/registerform.js"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+   
  
   
 </head>
-<body>
-	<form method="post" action="AgencyProfile.php" class="registerform container">
+<body >
+	<form method="post" action="AgencyProfile.php" class="registerform container" style="margin-right: auto;margin-left: 550px;display: block;box-sizing: border-box;">
 		
-		<div class="form-group">
+		<div class="form-group" style="margin-top: 50px;">
 
-							<input type="submit" name="submit" value="Delete Account"/>
-							<input type="submit" name="submit" value="Change Password"/>
+							<input type="submit" name="submit" class="btn btn-danger" value="Delete Account"/>
+							<input type="submit" name="submit" class="btn btn-primary" value="Change Password"/>
 		</div>
 		
-		<fieldset >
+		<fieldset style="margin-top: 50px;margin-bottom: 50px;">
 				
-		<legend>Agency Details</legend>
+		<legend style="border-bottom: 0;"><h1>Agency Details</h1></legend>
 		<div class="row">
 			<div class="form-group col-md-6">
 								
@@ -129,8 +128,8 @@
 		  		</div>
 	  		</div>
 	  	</fieldset>
-	  	<fieldset >
-			<legend>Agent Details</legend>
+	  	<fieldset style="margin-top: 50px;margin-bottom: 50px;">
+			<legend style="border-bottom: 0;"><h1>Agent Details</h1></legend>
 			<div class="row">
 				<div class="form-group col-md-6">
 					
@@ -161,9 +160,7 @@
 	  	<div class="form-group">
 			<input class="btn btn-info" type="submit" name="submit" value="Update Profile" />
 			<input class="btn btn-info" type="submit" name="submit" value="Cancel" />
-					
-			
 		</div>
-	
+	</form>
 </body>
 </html>

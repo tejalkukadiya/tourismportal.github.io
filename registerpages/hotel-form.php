@@ -6,7 +6,7 @@
 <head>
 	<title></title>
    <script src="assests/jquery.min.js"></script>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assests/registerform.css">
   <script src="../js/bootstrap.min.js"></script>
   <script src="assests/fileinput.min.js"></script>

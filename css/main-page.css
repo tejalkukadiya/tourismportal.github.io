@@ -101,10 +101,10 @@ body::-webkit-scrollbar {
 #header {
   position: relative;
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(27, 27, 27);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
-  height: 132px;
+  height: 120px;
   top: 0;
   text-align: center;
   transition: all 0.2s ease 0s;
@@ -124,7 +124,7 @@ body::-webkit-scrollbar {
 }
 .logo img {
   top: 29px;
-  width: 209px;
+  width: 184px;
   margin-left: -10px;
   margin-top: -6px;
   }
@@ -153,11 +153,12 @@ p.site-slogan {
 
 .header-style h1{font-size: 28px;width: 100%;padding: 6px 0;}
 .header-style h2{
-    color: #CDDC39;
+    color: #46c6c7;
+    font-size: 24px;
 }
 .header-style h1>a{
     color: white;
-    font-size: 60px;
+    font-size: 48px;
 }
 .header-style .homepage{
   display: inline-block;
@@ -170,6 +171,7 @@ p.site-slogan {
   /* background-color: rgba(0,0,0,0.6); */
   /* word-spacing: 36px; */
   /* padding: 0px 0; */
+  border-top: 1px solid white;
 }
 .header-style .list ul{margin: 0;padding: 0;}
 .header-style .list ul>li{display: inline-block;color: white;}
@@ -185,10 +187,10 @@ p.site-slogan {
   float: none;
 }
 #hornav ul {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgb(27, 27, 27);
   border-radius: 0 0 5px 5px;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 0px;
   padding: 0 90px;
   /* text-align: center; */
   width: 100%;
@@ -632,4 +634,10 @@ h3{
     text-shadow: 0px 0px 20px rgba(0,0,0,.2);
     font-size: 45px;
     left: inherit;
+}
+.counter p{
+    font-size: 20px;
+    color: rgb(0, 251, 207);
+    box-sizing: border-box;
+    display: block;
 }

@@ -3,7 +3,7 @@
 <?php 
 	session_start();
 	$userId=$_SESSION["username"];
-		include '../Connection.php';
+		include 'Connection.php';
 		
 				
 		$res = $conn->query("select * from guide where guideId = '$userId'");
@@ -98,19 +98,24 @@
    <script src="assests/registerform.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
- 
+ 	<style type="text/css">
+			.center{
+				width:900px;
+			}
+		</style>
   
 </head>
-<body>
-	<table class="table">
+<body><center>
+	<table class="table" style="width: 770px;">
 		<tr>
-			<td>Image</td>
-			<td><img src="<?php echo $imgurl;?>" height="100px" width="100px"></td>
+			<td></td>
+			<td><img src="<?php echo $imgurl;?>" class="pull-right" height="100px" width="100px"></td>
 		</tr>
 		<tr>
 		<?php if(!isset($_GET['eid'])){?>
-
-		<a href="GuideProfile.php?eid=<?php echo $userId;?>">Change Image</a>
+		<td></td>
+		<td>
+		<a href="GuideProfile.php?eid=<?php echo $userId;?>" class="btn btn-primary pull-right">Change Image</a></td>
 		<?php }
 			else{
 		?>
@@ -124,16 +129,16 @@
 			}
 		?>
 		</tr>
-	</table>
+	</table> </center>
 
 
-	<form method="post" action="GuideProfile.php" class="registerform container"enctype="multipart/form-data" >
+	<form method="post" action="GuideProfile.php" class="registerform container" enctype="multipart/form-data" style="margin-top: -68px;">
 		
 		<div class="row">
-			<div class="form-group col-md-6">
+			<div class="form-group">
 				<div class="form-group">
-							<input type="submit" name="submit" value="Delete Account"/>
-							<input type="submit" name="submit" value="Change Password"/>
+							<input type="submit" name="submit" class="btn btn-danger" value="Delete Account"/>
+							<input type="submit" name="submit" class="btn btn-primary	" value="Change Password"/>
 				</div>
 				<div class="form-group">
 
@@ -151,7 +156,7 @@
 			</div>
 	  	</div>
   		
-  		<div class=" form-group form-inline">
+  		<div class=" form-group">
 	  		
 			<div class="form-group form-inline">
 				<label for="contact">Contact No.</label>

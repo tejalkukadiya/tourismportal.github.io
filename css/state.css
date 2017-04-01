@@ -435,7 +435,7 @@ margin: 10px 0px;
 
 padding: 10px 20px;
 }
-.peoples .people-list img{width: 100%;}
+.peoples .people-list img{width: 100%;height: 170px;border-radius: 8px;}
 .peoples .people-list .people-name{margin: 10px 0;}
 .peoples .people-name h3{
     font-size: 18px;

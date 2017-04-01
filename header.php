@@ -16,7 +16,8 @@ $heading=$_SESSION['heading'];
       $l = "<li> <a><i class=\"fa fa-user pull-left\" style=\"    
     padding-left: 4px;\" aria-hidden=\"true\"></i>".$username."</a>
   <ul>
-                        <li style=\"display:block;\"><a >Edit Profile</a></li>
+                        <li style=\"display:block;\"><a href=\" registerpages/updateProfile.php\" >Edit Profile</a></li>
+                        <li><a href=\" registerpages/FeedbackForm.php\"> give Feedback</a></li>
                         <li style=\"display:block;\"><a href=\"logout.php\">Logout</a></li>
                       </ul>
   

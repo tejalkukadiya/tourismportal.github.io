@@ -16,7 +16,8 @@ $heading=$_SESSION['heading'];
       $l = "<li><i class=\"fa fa-user pull-left\" style=\"    padding-top: 20px;
     padding-left: 4px;\" aria-hidden=\"true\"></i><a>".$username."</a>
   <ul>
-                        <li><a >Edit Profile</a></li>
+                        <li><a href=\" ../registerpages/updateProfile.php\" >Edit Profile</a></li>
+                        <li><a href=\" ../registerpages/FeedbackForm.php\"> give Feedback</a></li>
                         <li><a href=\"../logout.php\">Logout</a></li>
                       </ul>
   
@@ -262,6 +263,9 @@ print('
                                     <li><a href="../registerpage/touristForm.php">Tourist register</a></li>
                                     <li><a href="../registerpage/guideRegister.php">Guide register</a></li>
                                     <li><a href="../registerpage/agencyRegister.html">Agency register</a></li>
+                                    <li><a href="../registerpages/hotel-form.php">Hotel Register</a></li>
+                                    <li><a href="../registerpages/Restaurant-form.php">Restaurant Register</a></li>
+                                    <li><a href="../registerpages/local-rent.php">Local Accommodation Register</a></li> 
                               </ul>
                           </li>
 													<li><a>booking</a>

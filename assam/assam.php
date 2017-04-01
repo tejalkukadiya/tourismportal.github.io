@@ -15,7 +15,8 @@
 			$l = "<li><i class=\"fa fa-user pull-left\" style=\"    padding-top: 20px;
     padding-left: 4px;\" aria-hidden=\"true\"></i><a >".$username."</a>
 	<ul>
-												<li><a >Edit Profile</a></li>
+												<li><a href=\" ../registerpages/updateProfile.php\" >Edit Profile</a></li>
+												<li><a href=\" ../registerpages/FeedbackForm.php\"> give Feedback</a></li>
 												<li><a href=\"../logout.php\">Logout</a></li>
 											</ul>
 	
@@ -147,7 +148,7 @@
                          <div class="container header-menu">
 							<nav class="list">
 									<ul id="hornavmenu" class="nav navbar-nav">
-										<li><a href="#">HOME</a></li>
+										<li><a href="../main-page.php">HOME</a></li>
 
 										<li><a> states</a>
 											<ul>
@@ -186,6 +187,9 @@
 												<li><a href="../registerpages/touristForm.php">Tourist register</a></li>
 												<li><a href="../registerpages/guideRegister.php">Guide register</a></li>
 												<li><a href="../registerpages/agencyRegister.html">Agency register</a></li>
+												<li><a href="../registerpages/hotel-form.php">Hotel Register</a></li>
+												<li><a href="../registerpages/Restaurant-form.php">Restaurant Register</a></li>
+												<li><a href="../registerpages/local-rent.php">Local Accommodation Register</a></li> 
 											</ul>
 										</li>
 										<?php }?>
@@ -530,49 +534,49 @@
 			<div class="col-md-2 people">
 				<img src="../img/team/1.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>Arnab Goswami</h3>
+					<h4>News Anchor</h4>
+					<!-- <p>about him</p>		 -->
 				</div>
 			</div>
 			<div class="col-md-2 people">
 				<img src="../img/team/2.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>Jyoti Prasad Agarwala</h3>
+					<h4>Playwright</h4>
+					<!-- <p>about him</p>	 -->	
 				</div>
 			</div>
 			<div class="col-md-2 people">
 				<img src="../img/team/3.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>seema Biswas</h3>
+					<h4>Film actress</h4>
+					<!-- <p>about him</p>	 -->	
 				</div>
 			</div>
 			<div class="col-md-2 people">
 				<img src="../img/team/4.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>Manikongona Dutta</h3>
+					<h4>Super Model</h4>
+					<!-- <p>about him</p>	 -->	
 				</div>
 			</div>
 			<div class="col-md-2 people">
-				<img src="../img/team/1.jpg">
+				<img src="../img/team/5.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>Gomdhar Konwar</h3>
+					<h4>First Freedom Fighter</h4>
+					<!-- <p>about him</p>	 -->	
 				</div>
 			</div>
 			<div class="col-md-2 people">
-				<img src="../img/team/2.jpg">
+				<img src="../img/team/6.jpg">
 				<div class="people-name">
-					<h3>lorem ipsum</h3>
-					<h4>designation</h4>
-					<p>about him</p>		
+					<h3>Dr. Bhupen Hazarika </h3>
+					<h4>Singer</h4>
+					<!-- <p>about him</p> -->		
 				</div>
 			</div>
 		</div>

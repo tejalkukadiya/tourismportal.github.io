@@ -2,7 +2,7 @@
 <?php
 	session_start();
 	$userId=$_SESSION["username"];
-		include '../Connection.php';
+		include 'Connection.php';
 		
 				
 		$res = $conn->query("select * from tourist where touristId = '$userId'");
@@ -78,14 +78,17 @@
 </head>
 <body>
 
-
-
-		<form action="TouristProfile.php" method="post">
+<div style="margin-left: auto;margin-right: auto;">
 		
-					<table>
+		<form action="TouristProfile.php" method="post" style="width: 500px;margin-left: auto;margin-right: auto;">
+		
+					<table class="table" style="width: 400px;">
 						<tr>
-								<td><input type="submit" name="submit" value="Delete Account"/></td>
-								<td><input type="submit" name="submit" value="Change Password"/></td>
+							<td colspan="2"><center><h1 style="margin: 50px 0">Tourist Profile</h1></center></td>
+						</tr>			
+						<tr>
+								<td><input type="submit" class="btn btn-danger" name="submit" value="Delete Account"/></td>
+								<td><input type="submit" class="btn btn-primary pull-right" name="submit" value="Change Password"/></td>
 						</tr>
 						<tr>
 						<!--<td><input type="hidden" name="id" value='<?php// echo $locId;?>'/></td>-->
@@ -387,13 +390,15 @@
 							<td><textarea cols="5" rows="4" class="form-control" required="required" name="address" id="address" ><?php echo $address; ?></textarea>
 						</tr>
 						<tr>
-							<td><input type="submit" name="submit" value="Update Profile" />
-							<td><input type="submit" name="submit" value="Cancel" />
+							<td><input type="submit" class="btn btn-primary" name="submit" value="Update Profile" />
+							<td><input type="submit" class="btn btn-danger pull-right" name="submit" value="Cancel" />
 						</tr>
 						
 						
 					</table>
 				</form>
+
+		</div>
 			
    </body>
 

@@ -15,7 +15,8 @@
 			$l = "<li><i class=\"fa fa-user pull-left\" style=\"    padding-top: 20px;
     padding-left: 4px;\" aria-hidden=\"true\"></i><a >".$username."</a>
 	<ul>
-												<li><a >Edit Profile</a></li>
+												<li><a href=\" registerpages/updateProfile.php\" >Edit Profile</a></li>
+												<li><a href=\" registerpages/FeedbackForm.php\"> give Feedback</a></li>
 												<li><a href=\"Logout.php\">Logout</a></li>
 											</ul>
 	
@@ -245,6 +246,9 @@
 												<li><a href="registerpages/touristForm.php">Tourist register</a></li>
 												<li><a href="registerpages/guideRegister.php">Guide register</a></li>
 												<li><a href="registerpages/agencyRegister.html">Agency register</a></li>
+												<li><a href="registerpages/hotel-form.php">Hotel Register</a></li>
+												<li><a href="registerpages/Restaurant-form.php">Restaurant Register</a></li>
+												<li><a href="registerpages/local-rent.php">Local Accommodation Register</a></li> 
 											</ul>
 										</li>
 										<?php }?>
@@ -670,9 +674,8 @@
 					
 				</div>
 
-			<div class="counter">
-				<h1><?php echo $cnt; ?></h1>
-			</div>
+				
+			
 	</div>
 
 
@@ -713,6 +716,9 @@
 					<input type="text" name="news-letter" class="form-control"><br>
 					<button type="button" class="btn btn-success">subscribe</button>
 				</div>
+			</div>
+			<div class="counter col-md-5">
+				<p>Total visits: <?php echo $cnt; ?></p>
 			</div>
 		</footer>
 		

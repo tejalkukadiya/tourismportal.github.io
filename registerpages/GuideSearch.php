@@ -60,8 +60,6 @@
 					<label for="language">Language</label><br>
 					<input type="radio" name="gfilter" value="city" id="city">
 					<label for="city">City</label><br>
-					<input type="radio" name="gfilter" value="all" id="all">
-					<label for="all">ALL-Guides</label><br>
 					
 					<br>
 					<div class="form-data">
@@ -69,7 +67,7 @@
 
 					<input type="submit" name="search" value="Search" style="display: inline-block;
 							    padding: 6px 30px;
-							    border-radius: 4px;"">
+							    border-radius: 4px;">
 					</div>
 			</form>
 
@@ -79,7 +77,7 @@
 		Available Guides Details
 	</h1> -->
 <?php 
-	include '../Connection.php';
+	include 'Connection.php';
 					
 			if($_SERVER["REQUEST_METHOD"]== "POST"){?>
 			
@@ -87,8 +85,16 @@
 						Available Guides Details
 					</h1>
 					
-		<?php	 $radio=$_POST["gfilter"];
+		<?php	 
+			
+				if(!isset($_POST["gfilter"])){
+					echo "<h3>Please Select filteration option </h3>";
+					return;
+				}
 			 
+				$radio=$_POST["gfilter"];
+				
+				
 				
 				if(!strcmp($radio,"places")){			
 					$place=$_POST["searchkey"];
@@ -152,8 +158,8 @@
 					
 					$res=$conn->query($sql);
 					
-					}
-					else if(!strcmp($radio,"all")){
+			}}
+					else{
 						
 						$sql="select * from guide";
 					//echo $sql;
@@ -270,7 +276,7 @@
 	</div>
 								
 						<?php 
-						}
+						
 						}?>
 		
 </div>
