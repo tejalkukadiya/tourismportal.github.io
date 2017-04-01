@@ -49,7 +49,7 @@ a:hover{
   background-repeat: no-repeat;
 }
 .slider .whole{
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.7);
 }
 .hometxt
 {padding-top: 222px;padding-bottom: 200px;padding-left: 64px;display: inline-flex;text-align: center;/* margin: 10px 200px; */margin-left: 43px;} 
@@ -312,18 +312,19 @@ overflow: hidden;
   
 padding-bottom: 10px;
 }
-.text-slider{
+.text-slider,.text-slider2,.text-slider3{
+      padding-bottom: 6px;
 }
-.text-slider .hometxt{
+.text-slider .hometxt,.text-slider2 .hometxt,.text-slider3 .hometxt{
       padding: 0;
     text-align: left;
     display: inline-block;
 
 }
-.text-slider .hometxt p{
+.text-slider .hometxt p ,.text-slider2 .hometxt p ,.text-slider3 .hometxt p{
     display: block;
 }
-.text-slider .hometxt .arrow{
+.text-slider .hometxt .arrow, .text-slider2 .hometxt .arrow , .text-slider3 .hometxt .arrow{
     display: inline-block;
     text-align: center;
     background-color: rgba(255,255,255,0.6);
@@ -333,11 +334,12 @@ padding-bottom: 10px;
     float: right;
     color: #9E9E9E;
 }
-.text-slider .hometxt .arrow button{
+.text-slider .hometxt .arrow button, .text-slider2 .hometxt .arrow button,.text-slider3 .hometxt .arrow button{
     display: inline-block;
     border: none;
     background-color: transparent;
     padding: 6px 12px;
+    color: rgba(51, 51, 51, 0.81);
     font-size: 16px;
 }
 .text-slider .hometxt .arrow button>i{}
@@ -407,6 +409,9 @@ color: gray;
 .places .place{margin: 70px 0;text-align: left;}
 .places .place img{
 width: 100%;
+}
+.place .place-desc{
+  overflow: hidden;
 }
 .places .place h2{  
 margin-bottom: 20px;

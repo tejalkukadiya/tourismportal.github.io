@@ -43,8 +43,8 @@
 						<div class="left-arrow">
 							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
 						</div>
-						<div class="center-txt">
-							<h1>
+						<div class="center-txt animated zoomIn">
+							<h1 >
 								ASSAM
 							</h1>
 							<h3>The Land of Red Rivers and Blue Hills</h3>	
@@ -62,12 +62,12 @@
 						<div class="left-arrow">
 							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
 						</div>
-						<div class="center-txt">
+						<div class="center-txt animated zoomIn">
 							<h1>
 								ASSAM
 							</h1>
 							<h3>The Land of Red Rivers and Blue Hills</h3>	
-							<a href="#">start now</a>
+							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
 							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
@@ -81,12 +81,12 @@
 						<div class="left-arrow">
 							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
 						</div>
-						<div class="center-txt">
+						<div class="center-txt animated zoomIn">
 							<h1>
 								ASSAM
 							</h1>
 							<h3>The Land of Red Rivers and Blue Hills</h3>	
-							<a href="#">start now</a>
+							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
 							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
@@ -100,12 +100,12 @@
 						<div class="left-arrow">
 							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
 						</div>
-						<div class="center-txt">
+						<div class="center-txt animated zoomIn">
 							<h1>
 								ASSAM
 							</h1>
 							<h3>The Land of Red Rivers and Blue Hills</h3>	
-							<a href="#">start now</a>
+							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
 							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
@@ -119,12 +119,12 @@
 						<div class="left-arrow">
 							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
 						</div>
-						<div class="center-txt">
+						<div class="center-txt animated zoomIn">
 							<h1>
 								ASSAM
 							</h1>
 							<h3>The Land of Red Rivers and Blue Hills</h3>	
-							<a href="#">start now</a>
+							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
 							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
@@ -177,7 +177,7 @@
                                         		</li>
                                             </ul>
 								        </li>
-										<li><a href="#">Hire-Guide</a></li>
+										<li><a href="../registerpages/GuideSearch.php">Hire-Guide</a></li>
 										<?php 
 											if(!isset($_SESSION['username'])){
 										?>
@@ -222,18 +222,7 @@
 			<div class="about-assam col-md-6">
 				<img src="../img/1.jpg">
 			</div>
-			<!-- <div class="col-md-6">
-				<p>
-					Assam is a state in northeastern India known for its wildlife, archeological sites and tea plantations. In the west, Guwahati, Assam&#39;s largest city, features silk bazaars and the hilltop Kamakhya Temple. Umananda Temple sits on Peacock Island in the Brahmaputra river. The state capital, Dispur, is a suburb of Guwahati. The ancient pilgrimage site of Hajo and Madan Kamdev, the ruins of a temple complex, lie nearby.<br>
-					Occupying 2.39% of Indias landmass, Assam is the most vibrant of eight states comprising the Northeast. Bounded by these states, West Bengal, Bhutan and Bangladesh, its topographical asymmetry is underscored by the Barail hill range sandwiched between two valleys – Brahmaputra and Barak – named after the dominant rivers.</br></p>
-
-				<p>
-					Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
-				</p>
-				<div class="read-more">
-					<a href="#">read more</a>
-				</div>
-			</div> -->
+			
 			<div class="col-md-6 about-details">
 				<div class="text-slider  animated fadeInLeft" style=" display:block;">
 					<div class="whole">
@@ -247,9 +236,8 @@
 								Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
 							</p> -->
 							<div class="arrow">
-									<button onclick="setindex1(-1)">Read more</button>
-									
-									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
+									<!-- <button onclick="setindex1(-1)"><i class="fa fa-angle-left"></i></button> -->
+									<button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button>
 							</div>
 						</div>
 					</div>
@@ -265,8 +253,7 @@
 								Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
 							</p> -->
 							<div class="arrow">
-									<button onclick="setindex1(1)">Back</button>
-									
+									<button onclick="setindex1(-1)"><i class="fa fa-angle-left"></i></button>
 									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
 							</div>
 						</div>
@@ -441,13 +428,51 @@
 				<h2>
 					River Brahmaputra
 				</h2>
-				<p>
+				<!-- <p>
 					Among the largest rivers on earth in terms of discharge and sediment, Brahmaputra is intrinsic to the socio-cultural life in Assam. The river is Assam&#39;s lifeline, nurturing its topography and culture and sustaining major urban centres, including Guwahati, on its banks. </br></br>
 
 					Brahmaputra has also been at the core of Assam&#39;s folklore, inspiring literature, art and music often for leaving behind a wave of destruction during the monsoon months. It was one of India’s major waterways until India’s partition and independence in 1947. The river today is used for ferrying passengers across and operating luxury cruises between Guwahati and Kaziranga. 
 				</p>
 				<div class="read-more">
 					<a href="#">read more</a>
+				</div> -->
+				<div class="text-slider2  animated fadeInLeft" style=" display:block;">
+					<div class="whole">
+				        <div class="hometxt">		
+							<p>
+								Assam is a state in northeastern India known for its wildlife, archeological sites and tea plantations. In the west, Guwahati, Assam&#39;s largest city, features silk bazaars and the hilltop Kamakhya Temple. Umananda Temple sits on Peacock Island in the Brahmaputra river. The state capital, Dispur, is a suburb of Guwahati. The ancient pilgrimage site of Hajo and Madan Kamdev, the ruins of a temple complex, lie nearby.<br>
+								<br>
+								Occupying 2.39% of Indias landmass, Assam is the most vibrant of eight states comprising the Northeast. Bounded by these states, West Bengal, Bhutan and Bangladesh, its topographical asymmetry is underscored by the Barail hill range sandwiched between two valleys &ndash; Brahmaputra and Barak &ndash; named after the dominant rivers.<br/><br>
+							</p>
+						`	<!-- <p>
+								Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
+							</p> -->
+							<div class="arrow">
+									<button onclick="setindex2(-1)">Read more</button>
+									
+									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-slider2  animated fadeInLeft" style=" display:none;">
+					<div class="whole">
+				        <div class="hometxt">		
+						 <p>
+							Among the largest rivers on earth in terms of discharge and sediment, Brahmaputra is intrinsic to the socio-cultural life in Assam. The river is Assam&#39;s lifeline, nurturing its topography and culture and sustaining major urban centres, including Guwahati, on its banks. </br></br>
+
+							Brahmaputra has also been at the core of Assam&#39;s folklore, inspiring literature, art and music often for leaving behind a wave of destruction during the monsoon months. It was one of India’s major waterways until India’s partition and independence in 1947. The river today is used for ferrying passengers across and operating luxury cruises between Guwahati and Kaziranga. 
+						</p>
+							<!-- <p>
+								Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
+							</p> -->
+							<div class="arrow">
+									<button onclick="setindex2(1)">Back</button>
+									
+									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -456,13 +481,41 @@
 				<h2>
 					Kaziranga National park
 				</h2>
-				<p>
-					Among the largest rivers on earth in terms of discharge and sediment, Brahmaputra is intrinsic to the socio-cultural life in Assam. The river is Assam&#39;s lifeline, nurturing its topography and culture and sustaining major urban centres, including Guwahati, on its banks. </br></br>
+				<div class="text-slider3  animated fadeInLeft" style=" display:block;">
+					<div class="whole">
+				        <div class="hometxt">		
+						 <p>
+							Among the largest rivers on earth in terms of discharge and sediment, Brahmaputra is intrinsic to the socio-cultural life in Assam. The river is Assam&#39;s lifeline, nurturing its topography and culture and sustaining major urban centres, including Guwahati, on its banks. </br></br>
 
-					Brahmaputra has also been at the core of Assam&#39;s folklore, inspiring literature, art and music often for leaving behind a wave of destruction during the monsoon months. It was one of India&#39;s major waterways until India&#39;s partition and independence in 1947. The river today is used for ferrying passengers across and operating luxury cruises between Guwahati and Kaziranga. 
-				</p>
-				<div class="read-more">
-					<a href="#">read more</a>
+							Brahmaputra has also been at the core of Assam&#39;s folklore, inspiring literature, art and music often for leaving behind a wave of destruction during the monsoon months. It was one of India’s major waterways until India’s partition and independence in 1947. The river today is used for ferrying passengers across and operating luxury cruises between Guwahati and Kaziranga. 
+						</p>
+							<!-- <p>
+								Green is the predominant colour of the state with an impressive 35% forest cover and thousands of hectares under tea cultivatation. Assam has five national parks including the World Heritage Sites of Kaziranga and Manas, and 20 Wildlife sanctuaries. The great Indian one-horned rhinocerous is one of Assam&#39; most famous denizens. 
+							</p> -->
+							<div class="arrow">
+									<button onclick="setindex3(-1)">Read more</button>
+									
+									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-slider3  animated fadeInLeft" style=" display:none;">
+					<div class="whole">
+				        <div class="hometxt">		
+						 <p>
+							Among the largest rivers on earth in terms of discharge and sediment, Brahmaputra is intrinsic to the socio-cultural life in Assam. The river is Assam&#39;s lifeline, nurturing its topography and culture and sustaining major urban centres, including Guwahati, on its banks. </br></br>
+
+							Brahmaputra has also been at the core of Assam&#39;s folklore, inspiring literature, art and music often for leaving behind a wave of destruction during the monsoon months. It was one of India’s major waterways until India’s partition and independence in 1947. The river today is used for ferrying passengers across and operating luxury cruises between Guwahati and Kaziranga. 
+						</p>
+					
+							<div class="arrow">
+									<button onclick="setindex3(1)">Back</button>
+									
+									<!-- <button onclick="setindex1(1)"><i class="fa fa-angle-right"></i></button> -->
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 place-image">
@@ -621,6 +674,48 @@
 				
 			}
 			j[index1-1].style.display="block";
+
+	}
+	var index2 =1;
+	function setindex2(n)
+	{
+		index2=index2+n;
+		showbackground2(index2);
+	}
+
+	function showbackground2(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("text-slider2");
+		if(n>j.length){ index2=1;}
+		if(n<1){ index2=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+				
+			}
+			j[index2-1].style.display="block";
+
+	}
+	var index3 =1;
+	function setindex3(n)
+	{
+		index3=index3+n;
+		showbackground3(index3);
+	}
+
+	function showbackground3(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("text-slider3");
+		if(n>j.length){ index3=1;}
+		if(n<1){ index3=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+				
+			}
+			j[index3-1].style.display="block";
 
 	}
 	// window.onload = function() {

@@ -17,35 +17,47 @@ $(document).ready(function($) {
 		}
 	});
 	
-	// // Navigation Scroll
-	// $(window).scroll(function(event) {
-	// 	Scroll();
-	// });
-
-	// $('.navbar-collapse ul li a').on('click', function() {  
-	// 	$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
-	// 	return false;
-	// });
-
-	// // User define function
-	// function Scroll() {
-	// 	var contentTop      =   [];
-	// 	var contentBottom   =   [];
-	// 	var winTop      =   $(window).scrollTop();
-	// 	var rangeTop    =   200;
-	// 	var rangeBottom =   500;
-	// 	$('.navbar-collapse').find('.scroll a').each(function(){
-	// 		contentTop.push( $( $(this).attr('href') ).offset().top);
-	// 		contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
-	// 	})
-	// 	$.each( contentTop, function(i){
-	// 		if ( winTop > contentTop[i] - rangeTop ){
-	// 			$('.navbar-collapse li.scroll')
-	// 			.removeClass('active')
-	// 			.eq(i).addClass('active');			
-	// 		}
-	// 	})
-	// };
-
-	// });
 });
+	
+	 
+
+
+// $(document).ready(function () {
+// 	// body...
+// jQuery.fn.liScroll = function(settings) {
+// 	settings = jQuery.extend({
+// 		travelocity: 0.03
+// 		}, settings);		
+// 		return this.each(function(){
+// 				var $strip = jQuery(this);
+// 				$strip.addClass("newsticker")
+// 				var stripHeight = 1;
+// 				$strip.find("li").each(function(i){
+// 					stripHeight += jQuery(this, i).outerHeight(true); // thanks to Michael Haszprunar and Fabien Volpi
+// 				});
+// 				var $mask = $strip.wrap("<div class='mask'></div>");
+// 				var $tickercontainer = $strip.parent().wrap("<div class='tickercontainer'></div>");								
+// 				var containerHeight = $strip.parent().parent().height();	//a.k.a. 'mask' width 	
+// 				$strip.height(stripHeight);			
+// 				var totalTravel = stripHeight;
+// 				var defTiming = totalTravel/settings.travelocity;	// thanks to Scott Waye		
+// 				function scrollnews(spazio, tempo){
+// 				$strip.animate({top: '-='+ spazio}, tempo, "linear", function(){$strip.css("top", containerHeight); scrollnews(totalTravel, defTiming);});
+// 				}
+// 				scrollnews(totalTravel, defTiming);				
+// 				$strip.hover(function(){
+// 				jQuery(this).stop();
+// 				},
+// 				function(){
+// 				var offset = jQuery(this).offset();
+// 				var residualSpace = offset.top + stripHeight;
+// 				var residualTime = residualSpace/settings.travelocity;
+// 				scrollnews(residualSpace, residualTime);
+// 				});			
+// 		});	
+// };
+
+// $(function(){
+//     $("ul#ticker01").liScroll();
+// });
+// });

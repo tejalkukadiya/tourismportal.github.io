@@ -364,7 +364,12 @@ background-color: rgba(0,0,0,0.6);
 }
 .hometxt .center-txt
 {padding: 0px 296px;}
-
+.hometxt .left-arrow{
+  float: left;
+}
+.hometxt .right-arrow{
+  float: right;
+}
 .hometxt .left-arrow button
 {
   background: transparent;
@@ -433,6 +438,35 @@ overflow: hidden;
  }
 .main-content .right-content{
   overflow: hidden;
+}
+.holder { 
+  background-color:#ccc;
+  width:300px;
+  height:250px;
+  overflow:hidden;
+  padding:10px;
+  font-family:Helvetica;
+}
+.holder .mask {
+  position: relative;
+  left: 0px;
+  top: 10px;
+  width:300px;
+  height:240px;
+  overflow: hidden;
+}
+.holder ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position: relative;
+}
+.holder ul li {
+  padding:10px 0px;
+}
+.holder ul li a {
+  color:darkred;
+  text-decoration:none;
 }
 .news .news-list{list-style: none;}
 .news-list li{

@@ -254,7 +254,7 @@ print('
 			                                        		</li>
 			                                            </ul>
 											        </li>
-													<li><a href="#">Hire-Guide</a></li>
+													<li><a href="registerpages/GuideSearch.php">Hire-Guide</a></li>
 													<li><a>guide-register</a>
                               <ul>
                                     <li><a href="registerpages/touristForm.php">Tourist register</a></li>

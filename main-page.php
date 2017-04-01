@@ -81,9 +81,67 @@
 	</style>
 					
 					<script src="js/jquery-1.11.1.min.js"></script>
-					<script src="js/jquery.min.js"></script>
+					<!-- <script src="js/jquery.min.js"></script> -->
 					<script src="js/bootstrap.min.js"></script>
 					<script src="js/animate.js"></script>
+					<script src="js/main.js"></script>
+
+					<script type="text/javascript">
+						$(window).load(function(){
+    $("#hornav").sticky({ topSpacing: 90 });
+  });
+  $(window).load(function(){
+    $("#header").sticky({ topSpacing: 0 });
+  });
+
+
+
+					
+						var index =1;
+	function setindex(n)
+	{
+		index=index+n;
+		showbackground(index);
+	}
+
+	function showbackground(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("home-slider");
+		if(n>j.length){ index=1;}
+		if(n<1){ index=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+
+			}
+			j[index-1].style.display="block";
+	}
+	
+	var index1 =1;
+	function setindex1(n)
+	{
+		index1=index1+n;
+		showbackground1(index1);
+	}
+
+	function showbackground1(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("text-slider");
+		if(n>j.length){ index1=1;}
+		if(n<1){ index1=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+				
+			}
+			j[index1-1].style.display="block";
+
+	}
+
+
+					</script>
 					
 
 </head>
@@ -177,7 +235,7 @@
                                         		</li>
                                             </ul>
 								        </li>
-										<li><a href="#">Hire-Guide</a></li>
+										<li><a href="registerpages/GuideSearch.php">Hire-Guide</a></li>
 										<?php 
 											if(!isset($_SESSION['username'])){
 										?>
@@ -245,9 +303,9 @@
 						</div>
 						<div class="center-txt">
 							<h1 class="animated fadeInLeft">
-								ASSAM
+								ARUNACHAL PRADESH
 							</h1>
-							<h3 class="animated fadeInRight">The Land of Red Rivers and Blue Hills</h3>	
+							<h3 class="animated fadeInRight"> The Land of Dawnlit Mountains</h3>	
 						</div>
 						<div class="right-arrow">
 							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
@@ -263,9 +321,9 @@
 						</div>
 						<div class="center-txt">
 							<h1 class="animated fadeInLeft">
-								ASSAM
+								MANIPUR
 							</h1>
-							<h3 class="animated fadeInRight">The Land of Red Rivers and Blue Hills</h3>	
+							<h3 class="animated fadeInRight">The Jewel of India</h3>	
 							
 						</div>
 						<div class="right-arrow">
@@ -282,9 +340,9 @@
 						</div>
 						<div class="center-txt">
 							<h1 class="animated fadeInLeft">
-								ASSAM
+								MEGHALAY
 							</h1>
-							<h3 class="animated fadeInRight">The Land of Red Rivers and Blue Hills</h3>	
+							<h3 class="animated fadeInRight">The abode of clouds</h3>	
 							
 						</div>
 						<div class="right-arrow">
@@ -301,9 +359,66 @@
 						</div>
 						<div class="center-txt">
 							<h1 class="animated fadeInLeft">
-								ASSAM
+								MIZORAM
 							</h1>
-							<h3 class="animated fadeInRight">The Land of Red Rivers and Blue Hills</h3>	
+							<h3 class="animated fadeInRight">The jewel of india</h3>	
+							
+						</div>
+						<div class="right-arrow">
+							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+				<div class="whole">
+	          		<div class="hometxt">
+						<div class="left-arrow">
+							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
+						</div>
+						<div class="center-txt">
+							<h1 class="animated fadeInLeft">
+								NAGALAND
+							</h1>
+							<h3 class="animated fadeInRight">The land of festivals</h3>	
+							
+						</div>
+						<div class="right-arrow">
+							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+				<div class="whole">
+	          		<div class="hometxt">
+						<div class="left-arrow">
+							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
+						</div>
+						<div class="center-txt">
+							<h1 class="animated fadeInLeft">
+								SIKKIM
+							</h1>
+							<h3 class="animated fadeInRight">Small but Beautiful</h3>	
+							
+						</div>
+						<div class="right-arrow">
+							<button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+				<div class="whole">
+	          		<div class="hometxt">
+						<div class="left-arrow">
+							<button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
+						</div>
+						<div class="center-txt">
+							<h1 class="animated fadeInLeft">
+								TRIPURA
+							</h1>
+							<h3 class="animated fadeInRight">A place of satiety</h3>	
 							
 						</div>
 						<div class="right-arrow">
@@ -472,7 +587,22 @@
 
 					<h2>News Updates</h2>
 
-
+					<div class="holder">
+  						<ul id="ticker01">
+							<li><span>10/10/2007</span><a href="#">The first thing that most Javascript programmers</a></li>
+							<li><span>10/10/2007</span><a href="#">End up doing is adding some code</a></li>
+							<li><span>10/10/2007</span><a href="#">The code that you want to run</a></li>
+							<li><span>08/10/2007</span><a href="#">Inside of which is the code that you want to run</a></li>
+							<li><span>08/10/2007</span><a href="#">Right when the page is loaded</a></li>
+							<li><span>05/10/2007</span><a href="#">Problematically, however, the Javascript code</a></li>
+							<li><span>04/10/2007</span><a href="#">The first thing that most Javascript programmers</a></li>
+							<li><span>04/10/2007</span><a href="#">End up doing is adding some code</a></li>
+							<li><span>04/10/2007</span><a href="#">The code that you want to run</a></li>
+							<li><span>03/10/2007</span><a href="#">Inside of which is the code that you want to run</a></li>
+							<li><span>03/10/2007</span><a href="#">Right when the page is loaded</a></li>
+							<li><span>01/10/2007</span><a href="#">Problematically, however, the Javascript code</a></li>
+						</ul>
+					</div>
 					<marquee direction="up" scrollamount="8" >
 					<P>	
 										<ul class="news-list">
@@ -562,62 +692,9 @@
 
 					});
 
+
 	</script>
-	<script type="text/javascript">
-	var index =1;
-	function setindex(n)
-	{
-		index=index+n;
-		showbackground(index);
-	}
-
-	function showbackground(n)
-	{
-		var i;
-		var j=document.getElementsByClassName("home-slider");
-		if(n>j.length){ index=1;}
-		if(n<1){ index=j.length}
-			for(i=0;i<j.length;i++)
-			{
-				j[i].style.display="none";
-
-			}
-			j[index-1].style.display="block";
-	}
 	
-	var index1 =1;
-	function setindex1(n)
-	{
-		index1=index1+n;
-		showbackground1(index1);
-	}
-
-	function showbackground1(n)
-	{
-		var i;
-		var j=document.getElementsByClassName("text-slider");
-		if(n>j.length){ index1=1;}
-		if(n<1){ index1=j.length}
-			for(i=0;i<j.length;i++)
-			{
-				j[i].style.display="none";
-				
-			}
-			j[index1-1].style.display="block";
-
-	}
-
-
-	 $(window).load(function(){
-    $("#hornav").sticky({ topSpacing: 90 });
-  });
-  $(window).load(function(){
-    $("#header").sticky({ topSpacing: 0 });
-  });
-
-
-</script>
-
 	
 	
 </body>
