@@ -1,9 +1,12 @@
 
-
 <?php
 	session_start();
+  $_SESSION['currentUrl']="AgencyProfile.php";
+  $_SESSION['heading']="Profile";
+  
+
 	$userId=$_SESSION["username"];
-		include 'Connection.php';
+		include '../Connection.php';
 		
 				
 		$res = $conn->query("select * from agent where agentId = '$userId'");
@@ -88,50 +91,54 @@
   
 </head>
 <body >
-	<form method="post" action="AgencyProfile.php" class="registerform container" style="margin-right: auto;margin-left: 550px;display: block;box-sizing: border-box;">
-		
-		<div class="form-group" style="margin-top: 50px;">
+		<?php
+	include '../header.php';
+?>
+	<div class="container "  >
+		<form method="post" action="AgencyProfile.php" class="registerform" style=" display: block;box-sizing: border-box;">
+			
+			<div class="form-group" style="margin-top: 50px;">
 
-							<input type="submit" name="submit" class="btn btn-danger" value="Delete Account"/>
-							<input type="submit" name="submit" class="btn btn-primary" value="Change Password"/>
-		</div>
-		
-		<fieldset style="margin-top: 50px;margin-bottom: 50px;">
+								<input type="submit" name="submit" class="btn btn-danger" value="Delete Account"/>
+								<input type="submit" name="submit" class="btn btn-primary" value="Change Password"/>
+			</div>
+			
+			<fieldset style="margin-top: 50px;margin-bottom: 50px;">
+					
+				<legend style="border-bottom: 0;"><h1>Agency Details</h1></legend>
 				
-		<legend style="border-bottom: 0;"><h1>Agency Details</h1></legend>
-		<div class="row">
-			<div class="form-group col-md-6">
-								
+					<div class="form-group">
+										
+						<div class="form-group">
+
+							<label for="agencyName">Agency Name</label>
+				  		  	<input type="text" class="form-control" required="required" id="agencyName" name="agencyName" value="<?php echo $agencyName; ?>">
+				  		</div>
+						<div class="form-group">
+							<label for="agencyAddress">Address</label>
+				  		  	<textarea cols="5" rows="4" class="form-control" required="required" name="agencyAddress" id="agencyAddress" ><?php echo $agencyAddress; ?></textarea>
+				  		</div>
+				  		<div class="form-group">
+
+							<label for="agencyEmail">Agency Email Addess</label>
+				  		  	<input type="email" class="form-control" required="required" id="agencyEmail" name="agencyEmail" value="<?php echo $agencyEmail; ?>">
+				  		</div>
+				  		<div class="form-group">
+
+							<label for="agencyContact">Contact No.</label>
+				  		  	<input type="text" class="form-control"  required="required" id="agencyContact" name="agencyContact" value="<?php echo $agencyCno; ?>">
+				  		</div>
+				  		<div class="form-group">
+
+							<label for="agencyUrl">WebSite URL</label>
+				  		  	<input type="text" class="form-control" required="required" id="agencyUrl" name="agencyUrl" value="<?php echo $agencyUrl; ?>">
+				  		</div>
+			  		</div>
+		  	</fieldset>
+		  	<fieldset style="margin-top: 50px;margin-bottom: 50px;">
+				<legend style="border-bottom: 0;"><h1>Agent Details</h1></legend>
+				
 				<div class="form-group">
-
-					<label for="agencyName">Agency Name</label>
-		  		  	<input type="text" class="form-control" required="required" id="agencyName" name="agencyName" value="<?php echo $agencyName; ?>">
-		  		</div>
-				<div class="form-group">
-					<label for="agencyAddress">Address</label>
-		  		  	<textarea cols="5" rows="4" class="form-control" required="required" name="agencyAddress" id="agencyAddress" ><?php echo $agencyAddress; ?></textarea>
-		  		</div>
-		  		<div class="form-group">
-
-					<label for="agencyEmail">Agency Email Addess</label>
-		  		  	<input type="email" class="form-control" required="required" id="agencyEmail" name="agencyEmail" value="<?php echo $agencyEmail; ?>">
-		  		</div>
-		  		<div class="form-group">
-
-					<label for="agencyContact">Contact No.</label>
-		  		  	<input type="text" class="form-control"  required="required" id="agencyContact" name="agencyContact" value="<?php echo $agencyCno; ?>">
-		  		</div>
-		  		<div class="form-group">
-
-					<label for="agencyUrl">WebSite URL</label>
-		  		  	<input type="text" class="form-control" required="required" id="agencyUrl" name="agencyUrl" value="<?php echo $agencyUrl; ?>">
-		  		</div>
-	  		</div>
-	  	</fieldset>
-	  	<fieldset style="margin-top: 50px;margin-bottom: 50px;">
-			<legend style="border-bottom: 0;"><h1>Agent Details</h1></legend>
-			<div class="row">
-				<div class="form-group col-md-6">
 					
 					<div class="form-group">
 
@@ -154,13 +161,14 @@
 			  		  	<input type="text" class="form-control"  required="required" id="agentContact" name="agentContact" value="<?php echo $agentCno; ?>">
 			  		</div>
 		  		</div>
-		  	</div>
-	  	</fieldset>
+			  	
+		  	</fieldset>
 
-	  	<div class="form-group">
-			<input class="btn btn-info" type="submit" name="submit" value="Update Profile" />
-			<input class="btn btn-info" type="submit" name="submit" value="Cancel" />
-		</div>
-	</form>
+		  	<div class="form-group">
+				<input class="btn btn-info" type="submit" name="submit" value="Update Profile" />
+				<input class="btn btn-info" type="submit" name="submit" value="Cancel" />
+			</div>
+		</form>
+	</div>
 </body>
 </html>

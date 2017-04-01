@@ -1,4 +1,11 @@
+<?php
+  
+  session_start();
 
+  $_SESSION['currentUrl']="hotel-form.php";
+  $_SESSION['heading']="Register";
+  
+ ?>
 
 <?php include '../Connection.php';?>
 <!DOCTYPE html>
@@ -17,10 +24,14 @@
   
 </head>
 <body>
+	<?php
+	include '../header.php';
+?>
 <?php
 
 ?>
-	<form method="post" action="hotel-entry.php" class="registerform container" enctype="multipart/form-data" >
+<div class="container hotelreg" >
+	<form method="post" action="hotel-entry.php" class="registerform" enctype="multipart/form-data" >
 		
 		<div class="row">
 			<div class="form-group col-md-6">
@@ -127,7 +138,8 @@
 		<div class="form-group">
 			<input type="submit" class="btn btn-info" value="Submit">
 		</div>
-</form>
+	</form>
+</div>
 
 </body>
 </html>

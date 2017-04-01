@@ -1,5 +1,12 @@
 
+<?php
+  
+  session_start();
 
+  $_SESSION['currentUrl']="local-rent.php";
+  $_SESSION['heading']="Rent";
+  
+ ?>
 <?php include '../Connection.php';?>
 
 <!DOCTYPE html>
@@ -18,7 +25,11 @@
   
 </head>
 <body>
-	<form method="post" action="local-rent-entry.php" class="registerform container" enctype="multipart/form-data" >
+		<?php
+	include '../header.php';
+?>
+	<div class="container">
+			<form method="post" action="local-rent-entry.php" class="registerform" enctype="multipart/form-data" >
 		
 		<div class="row">
 			<div class="form-group col-md-6">
@@ -109,7 +120,7 @@
 		<div class="form-group">
 			<input type="submit" class="btn btn-info" value="Submit">
 		</div>
-</form>
-
+			</form>
+	</div>
 </body>
 </html>

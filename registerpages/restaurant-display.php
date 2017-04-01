@@ -1,3 +1,11 @@
+<?php
+  
+  session_start();
+
+  $_SESSION['currentUrl']="restaurant-display.php";
+  $_SESSION['heading']="Restaurant";
+  
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +20,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<style type="text/css">
 		.pad {
-			padding: 20px 300px;
+			padding: 100px 300px;
 		}
 		.card {
 			    border: 1px solid black;
@@ -30,6 +38,9 @@
 
 
 <body>
+	<?php
+	include '../header.php';
+?>
 <div class="container pad">
 	<form action="restaurant-display.php" method="post" >
 		<h3>Search by</h3>
@@ -55,7 +66,7 @@
 		include '../Connection.php';
 		if($_SERVER["REQUEST_METHOD"]== "POST"){											
 			 $radio=$_POST["gfilter"];
-			 //echo 'radio'.$radio;				
+			//echo 'radio'.$radio;				
 		if(!strcmp($radio,"city")){
 			$city=$_POST["searchkey"];
 			$res=$conn->query("select * from restaurantlocationstateview where lower(city)=lower('$city')");

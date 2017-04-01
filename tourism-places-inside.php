@@ -5,9 +5,9 @@
   $_SESSION['currentUrl']="tourism-places-inside.php";
   $_SESSION['heading']="Places";
   
- ?>
-<?php 
+    include 'Connection.php';
     include_once "breadcrumbs.php";
+     $flag=TRUE;
 ?>
 
 <!DOCTYPE html>
@@ -17,64 +17,106 @@
 	<link rel="stylesheet" type="text/css" href="css/tourism-places-inside.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
+  <script>
+  var index =1;
+  function setindex(n)
+  {
+    index=index+n;
+    showbackground(index);
+  }
+
+  function showbackground(n)
+  {
+    var i;
+    var j=document.getElementsByClassName("home-slider");
+    if(n>j.length){ index=1;}
+    if(n<1){ index=j.length}
+      for(i=0;i<j.length;i++)
+      {
+        j[i].style.display="none";
+      }
+      j[index-1].style.display="block";
+  }
+  </script>
+
 </head>
+
+
+
 <body>
-            <?php
-                 include 'header.php';
-            ?>
+    <?php
+         include 'header.php';
+        try{  
+        $sid=-1;
+        if(isset($_GET['sid']))
+            $sid=$_GET['sid'];
+        $sql = "select * from touristspotlocationstateview where spotId='$sid'";      
+        $result = $conn->query($sql);
+        $query="select imgurl from touristspotimages where spotId='$sid'";
+        $resultq = $conn->query($query);
+    ?>
 
-	         <p style="margin-left: 50px; padding-top: 100px;"><?= breadcrumbs() ?></p>
+    <div class="container">
 
-           <div class="container desc">
-               <img src="img/4.jpg">
-               <p>Donec id vehicula dolor. Cras euismod dapibus felis quis auctor. Curabitur quis hendrerit velit. Aliquam et augue in lacus laoreet semper. Maecenas a quam euismod, pharetra velit ac, consequat diam. Nulla sollicitudin tincidunt sem, quis mattis mi porttitor et. Curabitur eget mi felis. Etiam convallis faucibus arcu id gravida. Ut posuere libero ut arcu malesuada fringilla mollis vel massa. Integer vulputate imperdiet erat, et ornare tellus scelerisque vel. Aenean vestibulum vel diam eget mattis.</p>
-           </div>
-    </div> 
+<p style="margin-left: 50px; padding-top: 100px;"><?= breadcrumbs() ?></p>
+      <div class="desc">
+      <?php
+        $row = $result->fetch_assoc();
+
+          //$spotId=$row['spotId'];
+          $spotName=$row['spotName'];
+          $famousFor=$row['famousFor'];
+          $distance=$row['distance'];
+          $availability=$row['timing'];
+          $category=$row['category'];
+          $city=$row['city'];
+          $state=$row['state'];
+        
+
+    
+        while ($row = $resultq->fetch_assoc()) {
+            $img='registerpages/'.$row['imgurl'];
+           // echo $img;
+        
+       ?>
+            <div class="home-slider" style="background-image: url(<?php echo $img; ?>);<?php if($flag==TRUE){?>display:block;<?php } else {?> display:none;<?php } ?>">
+            <?php  $flag=FALSE; ?>
+              <div class="whole">
+                  <div class="hometxt">
+              <div class="left-arrow">
+                <button onclick="setindex(-1)"><i class="fa fa-angle-left"></i></button>
+              </div>
+              <div class="right-arrow" style="margin-left: 648px">
+                <button onclick="setindex(1)"><i class="fa fa-angle-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <?php } ?>   
+       <!-- <p>
+          Many South, Eastern and Southeast Asian communities have settled in Assam over the centuries. But civilisation in the region did not necessarily begin with the fertile Brahmaputra Valley. Discoveries of stone implements and pottery reveal the existence of prehistoric communities on the highlands encircling the valley. 
+        Anthropological accounts say Assam’s demography is marked by several waves of migration. Australoids, the first inhabitants, were absorbed or dispersed by the Mongoloids that ancient Sanskrit literature term as Kirats. The Caucasoids followed, and their four categories – Mediterranean, Alpine, Indo-Aryan and Irano-Scythian – settled in the valleys.
+        </p>-->
 
 
-
-    <footer class="quick-links container" style="background-color: rgba(0,0,0,0.7);  color: white;
-  border-radius: 6px;
-  padding: 42px 76px;
-  margin-top: 10px;">
-    <div class="row">
-      <div class="col-md-4 contact" style="color: rgb(203,203,203);">
-        <h2 style="color: white;">
-          Contact
-        </h2>
         <p>
-        <span><i class="fa fa-phone"></i></span>
-          telephone: (212)888-77-88<br>
-        <span><i class="fa fa-envelope"></i></span>
-          email: xyz@abc.com<br>
-        <span><i class="fa fa-link"></i></span>
-          website: www.yewsdbgyw.com<br>
-        <br>
+          
+          <h2><?php echo $spotName;?></h2><br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $famousFor;?><br>
+          <h4>Distance:</h4><?php echo $distance;?> km from <?php echo $city;?><br>
+          <h4>State:</h4><?php echo $state;?>
+          
         </p>
-      </div>
-      <div class="col-md-4 link-details">
-        <h2 style="margin-left: -56px;"> Quick links </h2>
-        <ul >
-          <li> <a href="#" class="fa fa-angle-right">History</a></li>
-          <li> <a href="#" class="fa fa-angle-right">Guide-register</a></li>
-          <li> <a href="#" class="fa fa-angle-right">Booking</a></li>
-          <li> <a href="#" class="fa fa-angle-right">ContactUs</a></li>
-          <li> <a href="#" class="fa fa-angle-right">AboutUs</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 news-letter">
-        <h2>
-          For news-letter
-        </h2>
-        <p style="color: rgb(203,203,203);">
-        Sign up for our newsletter for all the 
-        latest news and information
-        </p>
-        <input type="text" name="news-letter" class="form-control"><br>
-        <button type="button" class="btn btn-success">subscribe</button>
-      </div>
+        
     </div>
-  </footer>
+    </div>	         
+
+<?php }
+    catch(Exception $e){
+    echo "Exception!!!!!!!!!!";
+  }
+ include_once 'footer.php';
+ ?>
 
 </body>
 </html>

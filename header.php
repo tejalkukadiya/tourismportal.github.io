@@ -10,14 +10,14 @@ $heading=$_SESSION['heading'];
   //echo "hii" .$username;
   
   if( strcmp($username , "guest" ) == 0)
-      $l = "<li style=\"display:block;\"> <a href='Login.php'><i class=\"fa fa-user pull-left\" style=\"    
+      $l = "<li style=\"display:block;\",\" width:auto;\"> <a href='Login.php'><i class=\"fa fa-user pull-left\" style=\"    
     padding-left: 4px;\" aria-hidden=\"true\"></i>Login</a></li>";
   else
       $l = "<li> <a><i class=\"fa fa-user pull-left\" style=\"    
-    padding-left: 4px;\" aria-hidden=\"true\"></i>".$username."</a>
+    padding-left: 4px;\",\" width:auto;\" aria-hidden=\"true\"></i>".$username."</a>
   <ul>
-                        <li style=\"display:block;\"><a href=\" registerpages/updateProfile.php\" >Edit Profile</a></li>
-                        <li><a href=\" registerpages/FeedbackForm.php\"> give Feedback</a></li>
+                        <li style=\"display:block;\",\" width:auto;\"><a href=\" registerpages/updateProfile.php\" >Edit Profile</a></li>
+                        <li style=\" width:auto;\"><a href=\" registerpages/FeedbackForm.php\"> give Feedback</a></li>
                         <li style=\"display:block;\"><a href=\"logout.php\">Logout</a></li>
                       </ul>
   
@@ -44,7 +44,7 @@ $heading=$_SESSION['heading'];
 }
  .main-nav .header-style .logo{
   float: left;
-  padding: 0px 12px;
+  
 }
 .main-nav .header-style .logo a{
     color: white;
@@ -128,7 +128,7 @@ $heading=$_SESSION['heading'];
   min-height: 22px;
   float: none;
   position: relative;
-  /*width: 100%;*/
+  width: 100%;
   margin: 0;
 }
 #hornav ul ul li a,
@@ -142,7 +142,7 @@ $heading=$_SESSION['heading'];
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 #hornav ul ul:before {
-  background: transparent url('img/menu_arrow.png') no-repeat 0 0;
+  background: transparent url('../img/menu_arrow.png') no-repeat 0 0;
   content: "";
   display: block;
   height: 10px;
@@ -245,7 +245,7 @@ print('
 			                                        		<li ><a href="tripura/tripura.php">TRIPURA</a>
 			                                        		</li>
 			                                        		<li>
-			                                            		<a href="sikkim/sikkim.php">    SIKKIM</a>
+			                                            		<a href="sikkim/sikkim.php">SIKKIM</a>
 			                                        		</li>
 			                                       			 <li>
 			                                            		<a href="nagaland/nagaland.php">NAGALAND</a>
@@ -256,11 +256,15 @@ print('
 			                                            </ul>
 											        </li>
 													<li><a href="registerpages/GuideSearch.php">Hire-Guide</a></li>
-													<li><a>guide-register</a>
+
+													<li><a>registeration</a>
                               <ul>
                                     <li><a href="registerpages/touristForm.php">Tourist register</a></li>
                                     <li><a href="registerpages/guideRegister.php">Guide register</a></li>
-                                    <li><a href="registerpages/agencyRegister.html">Agency register</a></li>
+                                    <li><a href="registerpages/agencyRegister.php">Agency register</a></li>
+                                    <li><a href="registerpages/hotel-form.php">Hotel Register</a></li>
+                                    <li><a href="registerpages/Restaurant-form.php">Restaurant Register</a></li>
+                                    <li><a href="registerpages/local-rent.php">Local Accommodation Register</a></li> 
                               </ul>
                           </li>
 													<li><a>booking</a>

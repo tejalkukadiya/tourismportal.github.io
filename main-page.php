@@ -245,7 +245,7 @@
 											<ul>
 												<li><a href="registerpages/touristForm.php">Tourist register</a></li>
 												<li><a href="registerpages/guideRegister.php">Guide register</a></li>
-												<li><a href="registerpages/agencyRegister.html">Agency register</a></li>
+												<li><a href="registerpages/agencyRegister.php">Agency register</a></li>
 												<li><a href="registerpages/hotel-form.php">Hotel Register</a></li>
 												<li><a href="registerpages/Restaurant-form.php">Restaurant Register</a></li>
 												<li><a href="registerpages/local-rent.php">Local Accommodation Register</a></li> 

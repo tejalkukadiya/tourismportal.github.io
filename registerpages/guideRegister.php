@@ -1,5 +1,11 @@
+<?php
+  
+  session_start();
 
-
+  $_SESSION['currentUrl']="guideRegister.php";
+  $_SESSION['heading']="GuideRegister";
+  
+ ?>
 <?php include '../Connection.php';?>
 <!DOCTYPE html>
 <html>
@@ -17,6 +23,9 @@
   
 </head>
 <body>
+		<?php
+	include '../header.php';
+?>
 	<form method="post" action="Guide.php" class="registerform container"enctype="multipart/form-data" >
 		
 		<div class="row">

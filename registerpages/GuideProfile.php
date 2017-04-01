@@ -2,8 +2,11 @@
 
 <?php 
 	session_start();
+
+  $_SESSION['currentUrl']="GuideProfile.php";
+  $_SESSION['heading']="Profile";
 	$userId=$_SESSION["username"];
-		include 'Connection.php';
+		include '../Connection.php';
 		
 				
 		$res = $conn->query("select * from guide where guideId = '$userId'");
@@ -105,34 +108,40 @@
 		</style>
   
 </head>
-<body><center>
-	<table class="table" style="width: 770px;">
-		<tr>
+<body>
+<?php
+	include '../header.php';
+?>
+<div class="container" style=" padding-top: 150px;">
+	<center>
+		<table class="table" style="width: 770px;">
+			<tr>
+				<td></td>
+				<td><img src="<?php echo $imgurl;?>" class="pull-right" height="100px" width="100px"></td>
+			</tr>
+			<tr>
+			<?php if(!isset($_GET['eid'])){?>
 			<td></td>
-			<td><img src="<?php echo $imgurl;?>" class="pull-right" height="100px" width="100px"></td>
-		</tr>
-		<tr>
-		<?php if(!isset($_GET['eid'])){?>
-		<td></td>
-		<td>
-		<a href="GuideProfile.php?eid=<?php echo $userId;?>" class="btn btn-primary pull-right">Change Image</a></td>
-		<?php }
-			else{
-		?>
-		<form action="GuideImageUpdate.php" method="post" enctype="multipart/form-data">
-			<!--<td><input type="hidden" name="id" value="<?php// echo $userId;?>"></td>-->
-			<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
-			<td><input type="submit" value="Add Image" name="submit"></td>
-		</form>
-			<td><a href="GuideProfile.php">Cancel</a></td>
-		<?php		
-			}
-		?>
-		</tr>
-	</table> </center>
+			<td>
+			<a href="GuideProfile.php?eid=<?php echo $userId;?>" class="btn btn-primary pull-right">Change Image</a></td>
+			<?php }
+				else{
+			?>
+			<form action="GuideImageUpdate.php" method="post" enctype="multipart/form-data">
+				<!--<td><input type="hidden" name="id" value="<?php// echo $userId;?>"></td>-->
+				<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+				<td><input type="submit" value="Add Image" name="submit"></td>
+			</form>
+				<td><a href="GuideProfile.php">Cancel</a></td>
+			<?php		
+				}
+			?>
+			</tr>
+		</table> 
+	</center>
 
 
-	<form method="post" action="GuideProfile.php" class="registerform container" enctype="multipart/form-data" style="margin-top: -68px;">
+	<form method="post" action="GuideProfile.php" class="registerform " enctype="multipart/form-data" style="margin-top: -68px;">
 		
 		<div class="row">
 			<div class="form-group">
@@ -250,7 +259,7 @@
 				<input type="submit"  class="btn btn-info" name="submit" value="Cancel" />
 		
 		</div>
-</form>
-
+	</form>
+</div>
 </body>
 </html>
