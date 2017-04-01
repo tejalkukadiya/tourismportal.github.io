@@ -667,9 +667,7 @@
 					
 				</div>
 				
-			<div class="counter">
-				<h1><?php echo $cnt; ?></h1>
-			</div>
+			
 	</div>
 
 
@@ -710,6 +708,9 @@
 					<input type="text" name="news-letter" class="form-control"><br>
 					<button type="button" class="btn btn-success">subscribe</button>
 				</div>
+			</div>
+			<div class="counter col-md-5">
+				<p>Total visits: <?php echo $cnt; ?></p>
 			</div>
 		</footer>
 		

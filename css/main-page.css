@@ -101,7 +101,7 @@ body::-webkit-scrollbar {
 #header {
   position: relative;
   background-color: #000;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(27, 27, 27);;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   height: 132px;
@@ -153,7 +153,7 @@ p.site-slogan {
 
 .header-style h1{font-size: 28px;width: 100%;padding: 6px 0;}
 .header-style h2{
-    color: #CDDC39;
+    color: #46c6c7;;
 }
 .header-style h1>a{
     color: white;
@@ -185,7 +185,7 @@ p.site-slogan {
   float: none;
 }
 #hornav ul {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgb(27, 27, 27);;
   border-radius: 0 0 5px 5px;
   display: inline-block;
   margin-top: 10px;
@@ -632,4 +632,10 @@ h3{
     text-shadow: 0px 0px 20px rgba(0,0,0,.2);
     font-size: 45px;
     left: inherit;
+}
+.counter p{
+    font-size: 20px;
+    color: rgb(0, 251, 207);
+    box-sizing: border-box;
+    display: block;
 }
