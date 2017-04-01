@@ -198,14 +198,14 @@
 
 
   <div class="ft text-center">
-          <a href="#" class="flight"><div class="active"><img src="img/ico/plane.png" style="height: 24px;margin-right: 6px;width: 24px;">Flight</div>
+          <a href="#flight-l" class="flight"><div class="active"><img src="img/ico/plane.png" style="height: 24px;margin-right: 6px;width: 24px;">Flight</div>
           </a>
-          <a href="#" class="train">
+          <a href="#train-l" class="train">
               <div><img src="img/ico/train.png" style="height: 20px;width: 20px;margin-right: 6px;">Train</div>
           </a>
   </div>
 
-<div class="hidden">
+  <div class="flight-search" id="flight-search">
   <div class="container1">
       <form id="flight" autocomplete="off">
           <div class="triptype">
@@ -337,9 +337,9 @@
            </div>
        </div>  -->
   </div>
- </div>       
+  </div>       
 
-  <div class="train">
+  <div class="train-search" id="train-search" style="display: none">
     <div class="container1">
       <form autocomplete="off" id="train"> 
         <div class="input-group" id="text">
@@ -437,7 +437,7 @@
              </div>
          </div>  -->
     </div>
-</div>
+  </div>
     
         
 
@@ -453,10 +453,10 @@
   <script type="text/javascript" src="js/indiaLow.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/map.js"></script>
-
-
 <script type="text/javascript">
   $(document).ready(function() { 
+
+    $('#flight-l').
 
   $('#flight').submit(function(e){
         
@@ -464,7 +464,7 @@
       
     $.ajax({
 
- url: 'APIs/Final api/goibibo/try.php',
+ url: 'APIs/flightsearch/try.php',
  type: 'GET',
  data: $(this).serialize(), // it will serialize the form data
         dataType: 'html'
