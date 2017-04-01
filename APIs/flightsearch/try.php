@@ -5,7 +5,8 @@
 //     'password' => 'passuser1',
 //     'gender'   => 1,
 // ];
-// echo "reach";
+
+
 function getiata($value)
 {
 include 'connection.php';
@@ -14,23 +15,23 @@ $sql="select code from airports where cityName='$validcode'";
 $result1 = mysqli_query($con, $sql);
 $code='';
 while ($row = mysqli_fetch_array($result1)) {
-	$code=$row['code'];
+  $code=$row['code'];
 }
 return $code;
 }
 
-		
+    
 function dateconvert($d){
-	$dateObj = DateTime::createFromFormat('Y-m-d', $d);
-	return $dateObj->format('Ymd');
+  $dateObj = DateTime::createFromFormat('Y-m-d', $d);
+  return $dateObj->format('Ymd');
 }
 
  if (isset($_GET['returndate'])) {
- 	$returndate=dateconvert($_GET['returndate']);
+  $returndate=dateconvert($_GET['returndate']);
  }
  else
  {
- 	$returndate='';
+  $returndate='';
  }
 
 
@@ -60,7 +61,7 @@ $post =[
 $ch = curl_init();
 $timeout=0;
 $url_post=http_build_query($post);
-// echo $url_post;		
+// echo $url_post;    
 $url_ahed="http://developer.goibibo.com/api/search/?";
 $url_final= $url_ahed.$url_post;
 // echo $url_final;
@@ -70,35 +71,36 @@ $url_final= $url_ahed.$url_post;
 curl_setopt($ch, CURLOPT_URL,$url_final);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = curl_exec($ch);
-	// echo $result;
+  // echo $result;
 if (curl_errno($ch)) {
-	// echo 'Error:' . curl_error($ch);
-	echo "<div class='center'><center><p>Problem occured please try again</P></center></div>";
+  // echo 'Error:' . curl_error($ch);
+  echo "<div class='center'><center><p>Problem occured please try again</P></center></div>";
 
 
 }
 else {
 
-	
-	// echo $result;	
-	$new=$result;
-		// print_r($result);
-	$new=json_decode($result,true);
+  
+  // echo $result;  
+  $new=$result;
+    // print_r($result);
+  $new=json_decode($result,true);
 
 
 
-	$returnflights=$new['data']['returnflights'];
-	$onwardflights=$new['data']['onwardflights'];
+  $returnflights=$new['data']['returnflights'];
+  $onwardflights=$new['data']['onwardflights'];
 // var_dump($onwardflights);
 // die();
-	$countonward=count($onwardflights);
-	foreach ($onwardflights as $f) {
-		
-			  echo '<div class="container card">
-			   <div class="row plane-logo">
+echo "reach";
+  $countonward=count($onwardflights);
+  foreach ($onwardflights as $f) {
+    
+        echo '<div class="container card">
+         <div class="row plane-logo">
                 <div class="col-md-2 plane-img">
                    <img src="img/ico/'.$f["airline"].'.gif">';
-                  	echo '<h3>'.$f["airline"].'</h3>
+                    echo '<h3>'.$f["airline"].'</h3>
                 </div>
                 <div class="col-md-10">
                         <h3 class="text-center"> Flight Code: <span>'.$f["flightcode"].'</span></h3>
@@ -114,14 +116,14 @@ else {
                                   <p> Duration:'.$f["duration"].' Hours</p>
                                   <p> ';
                                   if($f["stops"]==""){
-                                  	echo "Non-stop";
+                                    echo "Non-stop";
                                   }
                                   else{
-                                  	echo  $f["stops"].'Stops (Via)';
-                                  				foreach ($f["onwardflights"] as $q) {
-                                  					# code...
-                                  	echo $q["origin"].',';
-                                  				}
+                                    echo  $f["stops"].'Stops (Via)';
+                                          foreach ($f["onwardflights"] as $q) {
+                                            # code...
+                                    echo $q["origin"].',';
+                                          }
                                   }
                                   echo '</p>
                             </div> 
