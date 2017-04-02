@@ -94,7 +94,7 @@
 	  		  	<input type="text" class="form-control"  required="required" id="flat" name="flat" placeholder="e.g. 2BHK">
 		</div>
 		<div class="form-group">
-				<label for="gfirstName">Area</label>
+				<label for="gfirstName">Area (m<sup>2</sup>)</label>
 	  		  	<input type="text" class="form-control"  required="required" id="area" name="area">
 	  		</div>
 		<div class="form-group">
@@ -102,7 +102,7 @@
 	  		  	<input type="text" class="form-control"  required="required" id="type" name="type">
 	  		</div>
 		<div class="form-group">
-				<label for="gfirstName">Price</label>
+				<label for="gfirstName">Price(Rs.)</label>
 	  		  	<input type="text" class="form-control"  required="required" id="price" name="price">
 	  		</div>
 		
