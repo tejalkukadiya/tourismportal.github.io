@@ -80,171 +80,15 @@
 				}
 
 	</style>
-					
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<!-- <script src="js/jquery.min.js"></script> -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/animate.js"></script>
-	<script src="js/main.js"></script>
-
-	<script type="text/javascript">
-	$(window).load(function(){
-    $("#hornav").sticky({ topSpacing: 90 });
-  });
-  	$(window).load(function(){
-    $("#header").sticky({ topSpacing: 0 });
-  });
-
-
-
-
-	var index =1;
-	function setindex(n)
-	{
-		index=index+n;
-		showbackground(index);
-	}
-
-	function showbackground(n)
-	{
-		var i;
-		var j=document.getElementsByClassName("home-slider");
-		if(n>j.length){ index=1;}
-		if(n<1){ index=j.length}
-			for(i=0;i<j.length;i++)
-			{
-				j[i].style.display="none";
-
-			}
-			j[index-1].style.display="block";
-	}
-	
-	var index1 =1;
-	function setindex1(n)
-	{
-		index1=index1+n;
-		showbackground1(index1);
-	}
-
-	function showbackground1(n)
-	{
-		var i;
-		var j=document.getElementsByClassName("text-slider");
-		if(n>j.length){ index1=1;}
-		if(n<1){ index1=j.length}
-			for(i=0;i<j.length;i++)
-			{
-				j[i].style.display="none";
-				
-			}
-			j[index1-1].style.display="block";
-
-	}
-
-
-	</script>
-	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcu_TGU3Njo4D6xzC1v_ZpQr6avCtEGE&libraries=places&callback=initMap" async defer></script>	
-	<script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-
-	
-      function initMap() {
-        var map = new google.maps.Map(document.getElementById('map1'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom:15
-        });
-        var infoWindow = new google.maps.InfoWindow({map: map});
-
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
-
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
-            map.setCenter(pos);
-         map = new google.maps.Map(document.getElementById('map1'), {
-          center: pos,
-          zoom: 15
-        });
-
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: pos,
-          radius: 15000,
-          type: ['train_station']
-        }, processResults);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
+	<style type="text/css">
+      #map {
+        width: 500px;
+        height: 400px;
+        margin-top: 10px;
       }
-      function processResults(results, status, pagination) {
-        if (status !== google.maps.places.PlacesServiceStatus.OK) {
-          return;
-        } else {
-          createMarkers(results);
-
-          if (pagination.hasNextPage) {
-            var moreButton = document.getElementById('more');
-
-            moreButton.disabled = false;
-
-            moreButton.addEventListener('click', function() {
-              moreButton.disabled = true;
-              pagination.nextPage();
-            });
-          }
-        }
-      }
-      function createMarkers(places) {
-        var bounds = new google.maps.LatLngBounds();
-        var placesList = document.getElementById('places');
-
-        for (var i = 0, place; place = places[i]; i++) {
-          var image = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-          };
-
-          var marker = new google.maps.Marker({
-            map: map,
-            icon: image,
-            title: place.name,
-            position: place.geometry.location
-          });
-
-          placesList.innerHTML += '<li>' + place.name +'</br>'+ place.vicinity +'</li>';
-
-          bounds.extend(place.geometry.location);
-        }
-        map.fitBounds(bounds);
-      }
-
-
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-      }
-
-
-    </script>
-				
-		<link rel="stylesheet" type="text/css" href="APIs/widget/widget.css">
+    </style>
+		
+	<link rel="stylesheet" type="text/css" href="APIs/widget/widget.css">
 
 </head>
 	
@@ -271,7 +115,24 @@
   			<h3 >North-East India</h3>
        <span class="close">&times;</span>
 
-        <div id="map" style="width: 100%; height: 580px;"></div>
+       <h4>Calculate your route</h4>
+    <form id="calculate-route" name="calculate-route" action="#" method="get">
+      <label for="from">From:</label>
+      <input type="text" id="from" name="from" required="required" placeholder="An address" size="30" />
+      <a id="from-link" href="#">Get my position</a>
+      <br />
+
+      <label for="to">To:</label>
+      <input type="text" id="to" name="to" required="required" placeholder="Another address" size="30" />
+      <a id="to-link" href="#">Get my position</a>
+      <br />
+
+      <input type="submit" class="btn btn-primary" />
+      <input type="reset" class="btn btn-primary"/>
+    </form>
+    <!-- <div id="map"></div> -->
+        <div id="map" style="width: 100%; height: 450px;"></div>
+    <p id="error"></p>
   </div>
 
 </div>
@@ -841,8 +702,264 @@
 	<!-- <script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/animate.js"></script> -->
+
+
+
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<!-- <script src="js/jquery.min.js"></script> -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/animate.js"></script>
+	<script src="js/main.js"></script>
+
+	<script type="text/javascript">
+	$(window).load(function(){
+    $("#hornav").sticky({ topSpacing: 90 });
+  });
+  	$(window).load(function(){
+    $("#header").sticky({ topSpacing: 0 });
+  });
+
+
+
+
+	var index =1;
+	function setindex(n)
+	{
+		index=index+n;
+		showbackground(index);
+	}
+
+	function showbackground(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("home-slider");
+		if(n>j.length){ index=1;}
+		if(n<1){ index=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+
+			}
+			j[index-1].style.display="block";
+	}
+	
+	var index1 =1;
+	function setindex1(n)
+	{
+		index1=index1+n;
+		showbackground1(index1);
+	}
+
+	function showbackground1(n)
+	{
+		var i;
+		var j=document.getElementsByClassName("text-slider");
+		if(n>j.length){ index1=1;}
+		if(n<1){ index1=j.length}
+			for(i=0;i<j.length;i++)
+			{
+				j[i].style.display="none";
+				
+			}
+			j[index1-1].style.display="block";
+
+	}
+
+
+	</script>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYcu_TGU3Njo4D6xzC1v_ZpQr6avCtEGE&libraries=places&callback=initMap" async defer></script>	
+	<script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+	
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map1'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom:15
+        });
+        var infoWindow = new google.maps.InfoWindow({map: map});
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            map.setCenter(pos);
+         map = new google.maps.Map(document.getElementById('map1'), {
+          center: pos,
+          zoom: 15
+        });
+
+        var service = new google.maps.places.PlacesService(map);
+        service.nearbySearch({
+          location: pos,
+          radius: 15000,
+          type: ['train_station']
+        }, processResults);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+      function processResults(results, status, pagination) {
+        if (status !== google.maps.places.PlacesServiceStatus.OK) {
+          return;
+        } else {
+          createMarkers(results);
+
+          if (pagination.hasNextPage) {
+            var moreButton = document.getElementById('more');
+
+            moreButton.disabled = false;
+
+            moreButton.addEventListener('click', function() {
+              moreButton.disabled = true;
+              pagination.nextPage();
+            });
+          }
+        }
+      }
+      function createMarkers(places) {
+        var bounds = new google.maps.LatLngBounds();
+        var placesList = document.getElementById('places');
+
+        for (var i = 0, place; place = places[i]; i++) {
+          var image = {
+            url: place.icon,
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25)
+          };
+
+          var marker = new google.maps.Marker({
+            map: map,
+            icon: image,
+            title: place.name,
+            position: place.geometry.location
+          });
+
+          placesList.innerHTML += '<li>' + place.name +'</br>'+ place.vicinity +'</li>';
+
+          bounds.extend(place.geometry.location);
+        }
+        map.fitBounds(bounds);
+      }
+
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+      }
+
+
+    </script>
+				
+
+
+
+
+
+
+
+				<script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      function calculateRoute(from, to) {
+        // Center initialized to Naples, Italy
+        var myOptions = {
+          zoom: 10,
+          center: new google.maps.LatLng(40.84, 14.25),
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        // Draw the map
+        var mapObject = new google.maps.Map(document.getElementById("map"), myOptions);
+
+        var directionsService = new google.maps.DirectionsService();
+        var directionsRequest = {
+          origin: from,
+          destination: to,
+          travelMode: google.maps.DirectionsTravelMode.DRIVING,
+          unitSystem: google.maps.UnitSystem.METRIC
+        };
+        directionsService.route(
+          directionsRequest,
+          function(response, status)
+          {
+            if (status == google.maps.DirectionsStatus.OK)
+            {
+              new google.maps.DirectionsRenderer({
+                map: mapObject,
+                directions: response
+              });
+            }
+            else
+              $("#error").append("Unable to retrieve your route<br />");
+          }
+        );
+      }
+
+      $(document).ready(function() {
+        // If the browser supports the Geolocation API
+        if (typeof navigator.geolocation == "undefined") {
+          $("#error").text("Your browser doesn't support the Geolocation API");
+          return;
+        }
+
+        $("#from-link, #to-link").click(function(event) {
+          event.preventDefault();
+          var addressId = this.id.substring(0, this.id.indexOf("-"));
+
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({
+              "location": new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+            },
+            function(results, status) {
+              if (status == google.maps.GeocoderStatus.OK)
+                $("#" + addressId).val(results[0].formatted_address);
+              else
+                $("#error").append("Unable to retrieve your address<br />");
+            });
+          },
+          function(positionError){
+            $("#error").append("Error: " + positionError.message + "<br />");
+          },
+          {
+            enableHighAccuracy: true,
+            timeout: 10 * 1000 // 10 seconds
+          });
+        });
+
+        $("#calculate-route").submit(function(event) {
+          event.preventDefault();
+          calculateRoute($("#from").val(), $("#to").val());
+        });
+      });
+    </script>
+    
+
+
+
+
+
+
 	<script type="text/javascript" src="js/jquerysticky.js" charset="utf-8"></script>
-	<script type="text/javascript" src="js/ammap.js"></script>
+	<!-- <script type="text/javascript" src="js/ammap.js"></script> -->
 	<script type="text/javascript" src="js/indialow.js"></script>
 	<script type="text/javascript" src="js/map.js"></script>
 
