@@ -61,10 +61,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	$sql="insert into localaccomodation values('$firstname','$lastname','$contact','$altercontact','$gender','$email','$username','$password','$adhar','$address','$flat','$area','$amenities','$price','$target_file')";
 	if ($conn->query($sql) === TRUE) {
-        include 'registrationAck.php';	
+       header('Location:local-rent.php');
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-	//header('Location:local-rent.php');
+	header('Location:local-rent.php');
 }
 ?>

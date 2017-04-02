@@ -1,0 +1,13 @@
+.card {
+	border: 1px solid black;
+}
+.card .detail {
+	border: 1px solid black;
+	display: block;
+	width: auto;
+}
+.card .owner {
+	border: 1px solid black;
+	display: block;
+	width: auto;
+}
