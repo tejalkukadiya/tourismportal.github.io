@@ -630,9 +630,9 @@ h3{
     text-align: center;
     display: inline-block;
     top: auto;
-    color: #1fa3dd;
+    color: #525556;
     text-shadow: 0px 0px 20px rgba(0,0,0,.2);
-    font-size: 45px;
+    font-size: 30px;
     left: inherit;
 }
 .counter p{
