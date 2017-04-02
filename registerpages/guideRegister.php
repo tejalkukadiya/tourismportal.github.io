@@ -3,7 +3,7 @@
   session_start();
 
   $_SESSION['currentUrl']="guideRegister.php";
-  $_SESSION['heading']="GuideRegister";
+  $_SESSION['heading']="Register";
   
  ?>
 <?php include '../Connection.php';?>
@@ -24,7 +24,7 @@
 </head>
 <body>
 		<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 	<form method="post" action="Guide.php" class="registerform container"enctype="multipart/form-data" >
 		
@@ -177,6 +177,8 @@
 			<input type="submit" class="btn btn-info" value="Submit">
 		</div>
 </form>
-
+ <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

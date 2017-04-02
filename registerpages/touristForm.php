@@ -4,7 +4,7 @@
   session_start();
 
   $_SESSION['currentUrl']="touristForm.php";
-  $_SESSION['heading']="Tourist-register";
+  $_SESSION['heading']="Register";
   
  ?>
 <html>
@@ -25,7 +25,7 @@
 <body>
 
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>			
 
 <form action="Tourist.php" method="post">
@@ -322,7 +322,9 @@
 	</div>	
 </div>
 </form>
-
+ <?php
+       include 'footer.php';
+  ?>
    </body>
 
 </html>

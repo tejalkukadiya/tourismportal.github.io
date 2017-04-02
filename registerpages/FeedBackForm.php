@@ -70,7 +70,7 @@
 <body>
 
 <?php
-	include '../header.php';
+	include 'header.php';
 ?>		
 
 <form action="FeedBackProcess.php" method="post">
@@ -149,7 +149,9 @@
 </div>
 
 </form>
-
+ <?php
+       include 'footer.php';
+  ?>
  </body>
 
 </html>

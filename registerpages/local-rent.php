@@ -26,7 +26,7 @@
 </head>
 <body>
 		<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 	<div class="container">
 			<form method="post" action="local-rent-entry.php" class="registerform" enctype="multipart/form-data" >
@@ -122,5 +122,8 @@
 		</div>
 			</form>
 	</div>
+	 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

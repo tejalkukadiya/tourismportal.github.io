@@ -25,7 +25,7 @@
 </head>
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <?php
 
@@ -140,6 +140,8 @@
 		</div>
 	</form>
 </div>
-
+ <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

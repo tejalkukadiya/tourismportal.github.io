@@ -116,9 +116,9 @@
        <span class="close">&times;</span>
 
        <h4>Calculate your route</h4>
-    <form id="calculate-route" name="calculate-route" action="#" method="get">
+    <form id="calculate-route" name="calculate-route" action="#" method="get" style="margin-top: 20px">
       <label for="from">From:</label>
-      <input type="text" id="from" name="from" required="required" placeholder="An address" size="30" />
+      <input type="text" id="from" name="from" required="required" placeholder="Address" size="30" style="margin-bottom: 10px" />
       <a id="from-link" href="#">Get my position</a>
       <br />
 
@@ -218,6 +218,8 @@
 											<ul>
 												<li><a href="hotel.php">Accomodation</a></li>
 												<li><a href="booking.php">Transport</a></li>
+												<li><a href="registerpages/AgencyDisplay.php">Travel package</a></li>
+												<li><a href="registerpages/local-rent-show.php"> Local Accommodation</a></li>
 											</ul>
 										</li>
 										<li><a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">contact</a></li>
@@ -559,7 +561,7 @@
 		</div>
 
 		<div class="views container animated fadeInRight">
-						<center><h2>Quotes</h2></center>
+						<center><h2>Quotes</h2><hr class="hr"></center>
 						
 						<div class="view-data row">
 							<div  class="col-md-4">
@@ -611,8 +613,10 @@
 		</div>
 
 	<div class="row train-search">
+		<center><h2>Near By Train Station</h2>
+		<hr class="hr"></center>
 		<div id="right-panel " class="col-md-6 right-panel">
-		  <h2>Near By Train Station</h2>
+		  
 		  <ul id="places" class="places"></ul>
 		  <button id="more" class="more">More results</button>
 		</div>
@@ -625,7 +629,7 @@
  	<div class="weather-widgets">
   				
 		<center><h3>Weather Casts</h3></center>
-		<hr>
+		<hr class="hr">
 		<div class="row w-cast">
 				<div class="col-md-3 weather" id="assam-weather">
 					
@@ -681,11 +685,11 @@
 				<div class="col-md-4 link-details">
 					<h2> Quick links </h2>
 					<ul>
-						<li> <a href="#" class="fa fa-angle-right">History</a></li>
-						<li> <a href="#" class="fa fa-angle-right">Guide-register</a></li>
-						<li> <a href="#" class="fa fa-angle-right">Booking</a></li>
-						<li> <a href="#" class="fa fa-angle-right">ContactUs</a></li>
-						<li> <a href="#" class="fa fa-angle-right">AboutUs</a></li>
+						
+						<li> <a href="registerpages/guideRegister.php" class="fa fa-angle-right">Guide-register</a></li>
+						<li> <a href="booking.php" class="fa fa-angle-right">Booking</a></li>
+						<li> <a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank" class="fa fa-angle-right">ContactUs</a></li>
+						<li> <a href="aboutus.php" class="fa fa-angle-right">AboutUs</a></li>
 					</ul>
 				</div>
 				<div class="col-md-4 news-letter">

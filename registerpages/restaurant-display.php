@@ -39,7 +39,7 @@
 
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <div class="container pad">
 	<form action="restaurant-display.php" method="post" >
@@ -233,6 +233,8 @@
 		</table>
 </div>
 </div>
-
+ <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

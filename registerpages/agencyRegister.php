@@ -3,7 +3,7 @@
   session_start();
 
   $_SESSION['currentUrl']="agencyRegister.php";
-  $_SESSION['heading']="agency-detail";
+  $_SESSION['heading']="Register";
   
  ?>
 <!DOCTYPE html>
@@ -23,7 +23,7 @@
 </head>
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 	?>
 	<form method="post" action="Agency.php" class="registerform container">
 		
@@ -105,6 +105,8 @@
 	  	<div class="form-group">
 			<input type="submit" class="btn btn-info" value="Submit">
 		</div>
-	
+	 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

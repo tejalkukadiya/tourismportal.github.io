@@ -58,7 +58,7 @@
 </head>
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <div class="container guide-info">
 			<h1 class="text-center"> Search Guides</h1>
@@ -296,5 +296,8 @@
 		
 </div>
 </div>
+ <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

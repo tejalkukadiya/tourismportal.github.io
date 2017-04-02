@@ -142,7 +142,7 @@ $heading=$_SESSION['heading'];
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 #hornav ul ul:before {
-  background: transparent url('img/menu_arrow.png') no-repeat 0 0;
+  background: transparent url('../img/menu_arrow.png') no-repeat 0 0;
   content: "";
   display: block;
   height: 10px;
@@ -275,7 +275,7 @@ print('
                               <li><a href="registerpages/local-rent-show.php"> Local Accommodation</a></li>
 														</ul>
 													</li>
-													<li><a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">Contact</a></li>
+													<li><a  href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">Contact</a></li>
 													<li><a href="aboutus.php">About us</a></li>
 													
                         '.$l.'

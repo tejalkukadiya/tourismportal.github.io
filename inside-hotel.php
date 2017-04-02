@@ -3,7 +3,7 @@
   session_start();
 
   $_SESSION['currentUrl']="inside-hotel.php";
-  $_SESSION['heading']="Hotels";
+  $_SESSION['heading']="Hotel";
   
  ?>
 <!DOCTYPE html>
@@ -14,18 +14,6 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/inside-hotel.css">
 
-					<script src="js/jquery-1.11.1.min.js"></script>
-					<script src="js/jquery.min.js"></script>
-
-	<script type="text/javascript">
-$(document).ready(function(){
-		function demo() {
-		    document.getElementById('full-gallery').css({'display': 'block'});
-		};
-
-
-	});
-	</script>
 	
 </head>
 <body>
@@ -106,4 +94,10 @@ $(document).ready(function(){
 
 </body>
 
+	<script type="text/javascript">
+
+		function demo() {
+		    document.getElementById('full-gallery').css('display', 'block');
+		};
+	</script>
 </html>

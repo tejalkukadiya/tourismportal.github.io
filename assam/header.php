@@ -272,9 +272,11 @@ print('
 														<ul>
 															<li><a href="../hotel.php">Accomodation</a></li>
 															<li><a href="../booking.php">Transport</a></li>
+                              <li><a href="../registerpages/AgencyDisplay.php">Travel package</a></li>
+                              <li><a href="../registerpages/local-rent-show.php"> Local Accommodation</a></li>
 														</ul>
 													</li>
-													<li><a href="#">Contact</a></li>
+													<li><a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">Contact</a></li>
 													<li><a href="../aboutus.php">About us</a></li>
 													
                         '.$l.'

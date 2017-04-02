@@ -92,7 +92,7 @@
 </head>
 <body >
 		<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 	<div class="container "  >
 		<form method="post" action="AgencyProfile.php" class="registerform" style=" display: block;box-sizing: border-box;">
@@ -170,5 +170,8 @@
 			</div>
 		</form>
 	</div>
+	 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

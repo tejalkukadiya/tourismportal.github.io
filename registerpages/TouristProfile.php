@@ -81,7 +81,7 @@
 </head>
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <div style="margin-left: auto;margin-right: auto;">
 		
@@ -404,7 +404,9 @@
 				</form>
 
 		</div>
-			
+		 <?php
+       include 'footer.php';
+  ?>	
    </body>
 
 </html>

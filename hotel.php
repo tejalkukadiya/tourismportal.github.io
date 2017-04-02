@@ -17,183 +17,109 @@
 	
 </head>
 <body>
+	<?php 
+		include 'header.php';
+	?>
+<div class="row">
+	<div class=" col-md-4 one">
+	<form action="hotel.php" method="post" class="form one"  >
+		<h3>Search by</h3>
+		<div class="">
+		<input type="radio" name="gfilter" value="rating">
+		<label for="rating">Rating</label>
+		</div>
+
+		<div class="">
+		<input type="radio" name="gfilter" value="city">
+		<label for="city">City</label>
+		</div>
+		
+		<input type="text" name="searchkey" class="form-control">
+		<br>
+		<input type="submit" name="search" class="btn btn-primary" value="Search">
+	</form>
+	</div>
+	
+
+
 
 	<?php
-                 include 'header.php';
+        
+        include 'Connection.php';
+        if(isset($_GET['e']))
+			echo '<h3><center><font color="red">Sorry there was an error while submitting this form<br/> Try again!</font></center></h3>';
+		if($_SERVER["REQUEST_METHOD"] == "POST"){
+			 $radio=$_POST["gfilter"];				
+		if(!strcmp($radio,"city")){
+			$city=$_POST["searchkey"];
+			$res=$conn->query("select * from hotellocationstateview where lower(city)=lower('$city')");
+		}	
+		if(!strcmp($radio,"rating")){
+			$rating=$_POST["searchkey"];
+			$res=$conn->query("select * from hotellocationstateview where lower(rating)=lower('$rating')");
+		}}
+		else{
+			$res=$conn->query("select * from hotellocationstateview");
+		}
+
+
+		if( mysqli_num_rows($res) == 0 )
+		{	  
+			echo "Reasult Not Found";
+			return;				
+		}
     ?>
-	<div class="container hotel" >
+	<div class="container hotel col-md-8" >
 	
-		<div class="row find-hotel">
-		 	<div class="col-md-3 place-info">
-		 		<h3>find hotels</h3>
-		 		<input type="text" name="place" placeholder="enter place name"><br>
-		 		<p> check-in date</p>
-		 		<input type="date" name="check-in">
-		 		<p> check-out date</p>
-		 		<input type="date" name="check-out">
-		 		<p>persons: </p><select>
-		 			<option name="op1">1</option>
-		 			<option name="op2">2</option>
-		 			<option name="op3">3</option>
-		 			<option name="op4">group</option>
-		 		</select>
-		 		<p>kids:</p>
-		 		<select>
-		 			<option name="op1" value="selected">0 kids</option>
-		 			<option name="op2">1</option>
-		 			<option name="op3">2</option>
-		 			<option name="op4">3</option>
-		 			<option name="op5">group</option>
-		 		</select>
-		 		<p>rooms: </p>
-		 					<select>
-					 			<option name="op1" value="selected">1</option>
-					 			<option name="op2">2</option>
-					 			<option name="op3">more than 2</option>
-					 		</select>		 		
-		 		<p>price range:</p>	
-		 		<select>
-		 			<option name="op1" value="selected">&lt; rs.900</option>
-		 			<option name="op2">rs.900-rs.1899</option>
-		 			<option name="op3">rs.1899 &gt;</option>
-		 		</select>
-		 		<p> ratings</p>
-		 		<div class="stars">
-						<input class="star star-5" id="star-5-2" type="radio" name="star"/>
-					      <label class="star star-5" for="star-5-2"></label>
-					      <input class="star star-4" id="star-4-2" type="radio" name="star"/>
-					      <label class="star star-4" for="star-4-2"></label>
-					      <input class="star star-3" id="star-3-2" type="radio" name="star"/>
-					      <label class="star star-3" for="star-3-2"></label>
-					      <input class="star star-2" id="star-2-2" type="radio" name="star"/>
-					      <label class="star star-2" for="star-2-2"></label>
-					      <input class="star star-1" id="star-1-2" type="radio" name="star"/>
-					      <label class="star star-1" for="star-1-2"></label>
-					      
-					      
-					    
-  				</div>
-  				<input type="button" name="submit" value="search" style="background-color: #eee; box-shadow: 2px 2px 6px;">	
-		 	</div>
-		 	<div class="col-md-8 hotel-info">	
+		<div class=" find-hotel">
+		 	<div class=" hotel-info">	
 		 		<div class="details">
+		 			<div class="row hotel-des">
 		 				<h2> most popular hotels</h2>
-						<div class="row hotel-des">
+		 				<?php while($row = $res->fetch_assoc()){
+							$hotelname=$row['hotelname'];
+							$managername=$row['managername'];
+							$contact=$row['contact'];
+							$altercontact=$row['altercontact'];
+							$website=$row['websites'];
+							$email=$row['email'];
+							$address=$row['address'];
+							$pincode=$row['pincode'];
+							$rating=$row['rating'];
+							$status=$row['status'];
+							$city=$row['city'];
+							$state=$row['state'];
+							$img=$row['img'];
+							//echo $hotelname;
+						?>
+						
 							<div class="col-md-4 hotel-col">
 								<a href="inside-hotel.php">
 									<img src="img/Hotels/chatur musafir.jpg"> 
-									<figcaption>hotel blue moon<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/4.jpg"> 
-									<figcaption>hotel imperial heights<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
+									<figcaption><?php echo $hotelname;?><br>
+									<?php
+										for($i=1 ; $i<=$rating ; $i++)
+											echo '<i class="fa fa-star"></i>';
+									?>
+									<br>
+									<!--<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
+									international<br>-->
+									Address:<?php echo $address;?><br><br><br>
+									City:<?php echo $city;?>
 									<span class="cost fa fa-inr"> 1994</span>
 									</figcaption>
 								</a>
 							</div>
 
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/images (1).jpg"> 
-									<figcaption>hotel taj<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									national<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-
-						</div>
-						<div class="row hotel-des">
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/5.jpg"> 
-									<figcaption>hotel blue moon<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/hotels-2.jpg"> 
-									<figcaption>hotel imperial heights<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/images.jpg"> 
-									<figcaption>hotel taj<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									national<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-
-						</div>
-						<div class="row hotel-des">
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/download.jpg"> 
-									<figcaption>hotel blue moon<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/4.jpg"> 
-									<figcaption>hotel imperial heights<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									international<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-
-							<div class="col-md-4 hotel-col">
-								<a href="inside-hotel.php">
-									<img src="img/Hotels/chatur musafir.jpg"> 
-									<figcaption>hotel taj<br>
-									<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><br>
-									national<br>
-									address::<br>
-									<span class="cost fa fa-inr"> 1994</span>
-									</figcaption>
-								</a>
-							</div>
-
-						</div>
+							<?php } ?>
+		 			</div>
 		 		</div>
 		 	</div>
 		 </div>
 
 	</div>
+	</div>
+
 
 
 

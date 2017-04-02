@@ -1,3 +1,12 @@
+<?php
+    
+    session_start();
+
+    $_SESSION['currentUrl']="local-rent-show.php";
+    $_SESSION['heading']="Rent";
+    
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +33,10 @@
     </style>
 </head>
 <body>
-<div class="container">
+	<?php
+	include 'header.php';
+?>
+<div class="container " style="padding-top: 80px">
 	<!-- <div class="col-md-2d-6 card">
 		<div class="col-md-2 image">
 			<img src="">
@@ -89,6 +101,8 @@
 	</div>	
 	<?php } ?>
 </div>
-
+<?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

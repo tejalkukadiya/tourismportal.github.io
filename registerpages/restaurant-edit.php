@@ -65,7 +65,7 @@
 
 <body style="overflow-x: hidden;">
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <?php
 	
@@ -96,7 +96,7 @@
 		$img=$row['img'];
 ?>
 	
-	<div class="container center" style="margin: 20px 300px">
+	<div class="container center" style="padding: 130px 300px;">
 		
 			<table class="table">
 		<tr>
@@ -222,9 +222,11 @@
 			<td><a href="restaurant-edit.php" class="btn btn-danger">Cancel</a></td>
 		</tr>
 	</table>
-<?php } ?>
 </form>	
 	</div>
-	
+<?php } ?>
+	 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

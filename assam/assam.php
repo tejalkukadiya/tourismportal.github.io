@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('../img/new6.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('../img/23.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -105,7 +105,7 @@
 							<h1>
 								ASSAM
 							</h1>
-							<h3>The Land of Literacy</h3>	
+							<h3>The Land of Brahmaputra</h3>	
 							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
@@ -198,9 +198,10 @@
 												<li><a href="../hotel.php">Accomodation</a></li>
 												<li><a href="../booking.php">Transport</a></li>
 												<li><a href="../registerpages/AgencyDisplay.php">Travel package</a></li>
+												<li><a href="../registerpages/local-rent-show.php"> Local Accommodation</a></li>
 											</ul>
 										</li>
-										<li><a href="#">contact</a></li>
+										<li><a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">contact</a></li>
 										<li><a href="../aboutus.php">about us</a></li>
 										<?php 
 												echo $l;
@@ -594,42 +595,45 @@
   padding: 42px 76px;
   margin-top: 10px;">
 		<div class="row">
-			<div class="col-md-4 contact">
-				<h2>
-					Contact
-				</h2>
-				<p>
-				<span><i class="fa fa-phone"></i></span>
-					telephone: (212)888-77-88<br>
-				<span><i class="fa fa-envelope"></i></span>
-					email: xyz@abc.com<br>
-				<span><i class="fa fa-link"></i></span>
-					website: www.yewsdbgyw.com<br>
-				<br>
-				</p>
+				<div class="col-md-4 contact">
+					<h2>
+						Contact
+					</h2>
+					<p>
+					<span><i class="fa fa-phone"></i></span>
+						telephone: (212)888-77-88<br>
+					<span><i class="fa fa-envelope"></i></span>
+						email: xyz@abc.com<br>
+					<span><i class="fa fa-link"></i></span>
+						website: www.yewsdbgyw.com<br>
+					<br>
+					</p>
+				</div>
+				<div class="col-md-4 link-details">
+					<h2> Quick links </h2>
+					<ul>
+						
+						<li> <a href="registerpages/guideRegister.php" class="fa fa-angle-right">Guide-register</a></li>
+						<li> <a href="booking.php" class="fa fa-angle-right">Booking</a></li>
+						<li> <a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank" class="fa fa-angle-right">ContactUs</a></li>
+						<li> <a href="aboutus.php" class="fa fa-angle-right">AboutUs</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 news-letter">
+					<h2>
+						For news-letter
+					</h2>
+					<p>
+					Sign up for our newsletter for all the 
+					latest news and information
+					</p>
+					<input type="text" name="news-letter" class="form-control"><br>
+					<button type="button" class="btn btn-success">subscribe</button>
+				</div>
 			</div>
-			<div class="col-md-4 link-details">
-				<h2 style="margin-left: -46px;"> Quick links </h2>
-				<ul>
-					<li> <a href="#" class="fa fa-angle-right">History</a></li>
-					<li> <a href="#" class="fa fa-angle-right">Guide-register</a></li>
-					<li> <a href="#" class="fa fa-angle-right">Booking</a></li>
-					<li> <a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" class="fa fa-angle-right">ContactUs</a></li>
-					<li> <a href="#" class="fa fa-angle-right">AboutUs</a></li>
-				</ul>
+			<div class="counter col-md-5">
+				<p>Total visits: <?php echo $cnt; ?></p>
 			</div>
-			<div class="col-md-4 news-letter">
-				<h2>
-					For news-letter
-				</h2>
-				<p>
-				Sign up for our newsletter for all the 
-				latest news and information
-				</p>
-				<input type="text" name="news-letter" class="form-control"><br>
-				<button type="button" class="btn btn-success">subscribe</button>
-			</div>
-		</div>
 	</footer>
 
 

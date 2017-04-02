@@ -44,7 +44,7 @@
 </head>
 <body>
 		<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <div class="container agency">
 	<h1 class="text-center"> --Available Agencies--</h1>
@@ -101,5 +101,8 @@
 	</div>
 						<?php }?>
 		</div>
+			 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

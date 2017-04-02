@@ -110,7 +110,7 @@
 </head>
 <body>
 <?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <div class="container" style=" padding-top: 150px;">
 	<center>
@@ -261,5 +261,8 @@
 		</div>
 	</form>
 </div>
+ <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

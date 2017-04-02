@@ -165,7 +165,7 @@ float: right;
 
 font-size: 20px;
 
-margin: -26px 6px;
+margin: 26px 6px 10px;
 
 color: #FFEB3B;
 }
@@ -222,3 +222,9 @@ color: black;
   font-weight: 700;
 }
 
+.one {
+  width: 226px;
+  padding-top: 60px;
+  padding-left: 16px;
+  display: inline-block;
+}

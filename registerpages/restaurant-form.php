@@ -26,7 +26,7 @@
 </head>
 <body>
 	<?php
-	include '../header.php';
+	include 'header.php';
 ?>
 <?php
 	if(isset($_GET['e']))
@@ -145,5 +145,8 @@
 			</div>
 		</form>
 	</div>
+	 <?php
+       include 'footer.php';
+  ?>
 </body>
 </html>

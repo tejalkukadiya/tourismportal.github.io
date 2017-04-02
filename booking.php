@@ -456,7 +456,7 @@
 <script type="text/javascript">
   $(document).ready(function() { 
 
-    $('#flight-l').
+    
 
   $('#flight').submit(function(e){
         
