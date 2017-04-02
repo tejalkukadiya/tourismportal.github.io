@@ -669,7 +669,7 @@
 										<?php
 							while($row =  $res->fetch_assoc())
 							{
-								$img=$row["imgurl"];
+								$img='registerpages/'.$row["imgurl"];
 								$title=$row["title"];
 								
 					echo '<li><img src="'.$img.'" style="width:300px;height:200px;">
@@ -680,6 +680,18 @@
 							</ul>
 						</P>				
 					</marquee>
+
+					<div class="tips">
+						<h3>Do's & Donts</h3>
+
+						<ul>
+							<li>Before entering into some North Eastern states like Arunachal Pradesh,
+Manipur, Mizoram and Nagaland, travellers need to have Restricted Area
+Permission or Protected Area Persission.</li>
+							<li>Get medical check-up before traveling to North-east India. Always keep a
+personal first aid box with sufficient mosquito repellent to prevent the mosquito bite</li>
+						</ul>
+					</div>
 
 
 					
