@@ -1,6 +1,8 @@
 .w-cast{
     
 padding: 0 230px;
+    
+MARGIN: 0;
 }
 .weather {
     text-transform: capitalize;

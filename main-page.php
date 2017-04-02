@@ -217,7 +217,7 @@
 										<li><a>booking</a>
 											<ul>
 												<li><a href="hotel.php">Accomodation</a></li>
-												<li><a href="booking.php">Tranport</a></li>
+												<li><a href="booking.php">Transport</a></li>
 											</ul>
 										</li>
 										<li><a href="http://necouncil.gov.in/writereaddata/mainlinkfile/File206.pdf" target="_blank">contact</a></li>
@@ -262,7 +262,7 @@
 					</div>
 				</div>
 			</div>
-        	<div class="home-slider" style="background-image: url('img/assam_manas_national_park.jpg'); display:none;">
+        	<div class="home-slider" style="background-image: url('img/madhuri_lake_AP.jpg'); display:none;">
 	        	<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -280,7 +280,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_kaziranga.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/manipur-landscape.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -299,7 +299,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_goalpara.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/meghalay_1.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -318,7 +318,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/meghalay_1.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -337,7 +337,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/chizami_nagaland.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -356,7 +356,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/gangtok_sikkim.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -375,7 +375,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('img/assam_bogibeel_bridge.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('img/museum_agartala_tripura.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -556,17 +556,17 @@
 						
 						<div class="view-data row">
 							<div  class="col-md-4">
-								<img src="img/team/1.jpg">
+								<img src="img/team/7.jpg">
 								
 							</div>
 							<div class="col-md-8 quote">
 								<i class="fa fa-caret-left" ></i>
-								<p>
-									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								<p>S. DEB ROY<br>
+								Think out of the box,not in a traditional way. Try to come up with innovative ideas; we are there to fund innovative start ups in the north-east and the rest of india.
 								</p>
 							</div>
 						</div>
-						<div class="view-data row">
+						<!-- <div class="view-data row">
 							<div class="col-md-8 quote1">
 								<i class="fa fa-caret-right" ></i>
 								<p>
@@ -600,8 +600,8 @@
 							<div  class="col-md-4">
 								<img src="img/team/4.jpg">	
 							</div>
-						</div>
-					</div>
+						</div> -->
+		</div>
 
 	<div class="row train-search">
 		<div id="right-panel " class="col-md-6 right-panel">
@@ -612,8 +612,10 @@
 		<div class="col-md-6 train-map">
 			<div id="map1" class="map1"></div>
 		</div>
-  </div>
-  			<div class="weather-widgets">
+  	</div>
+  			
+
+ 	<div class="weather-widgets">
   				
 		<center><h3>Weather Casts</h3></center>
 		<hr>
@@ -630,8 +632,8 @@
 				<div class="col-md-3 weather" id="mg-weather">
 					
 				</div>
-				</div>
-				<div class="row w-cast">
+		</div>
+		<div class="row w-cast">
 				<div class="col-md-3 weather" id="mp-weather">
 					
 				</div>
@@ -645,8 +647,8 @@
 					
 				</div>
 					
-  				</div>
-		</div>
+  		</div>
+	</div>
 
 				
 			
