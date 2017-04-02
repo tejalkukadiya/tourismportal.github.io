@@ -123,7 +123,7 @@
 				    <div class="row">
 						<div class="col-md-4 folio-item">
 							<div class="folio-img">
-								<img src="../img/1 (1).jpg">
+								<img src="../img/2 (2).jpg">
 							</div>
 							<div class="overlay">
 								<div class="overlay-content">
@@ -142,7 +142,7 @@
 						</div>
 						<div class="col-md-4 folio-item">
 								<div class="folio-img">
-									<img src="../img/1 (2).jpg">
+									<img src="../img/music.png">
 								</div>
 								<div class="overlay">
 									<div class="overlay-content">
@@ -161,7 +161,7 @@
 						</div>
 						<div class="col-md-4 folio-item">
 								<div class="folio-img">
-									<img src="../img/2 (1).jpg">
+									<img src="../img/women.jpg">
 								</div>
 								<div class="overlay">
 									<div class="overlay-content">
@@ -180,7 +180,7 @@
 						</div>
 						<div class="col-md-4 folio-item">
 							<div class="folio-img">
-								<img src="../img/3 (1).jpg">
+								<img src="../img/cuisine.png">
 							</div>
 							<div class="overlay">
 								<div class="overlay-content">
@@ -199,7 +199,7 @@
 						</div>
 						<div class="col-md-4 folio-item">
 							<div class="folio-img">
-								<img src="../img/3 (2).jpg">
+								<img src="../img/wood.jpg">
 							</div>
 							<div class="overlay">
 								<div class="overlay-content">

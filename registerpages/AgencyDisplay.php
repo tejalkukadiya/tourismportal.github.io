@@ -1,3 +1,11 @@
+<?php
+  
+  session_start();
+
+  $_SESSION['currentUrl']="AgencyDisplay.php";
+  $_SESSION['heading']="Agencies";
+  
+ ?>
 <html>
 <head>
 <title>
@@ -35,7 +43,9 @@
 		</style>
 </head>
 <body>
-
+		<?php
+	include '../header.php';
+?>
 <div class="container agency">
 	<h1 class="text-center"> --Available Agencies--</h1>
 

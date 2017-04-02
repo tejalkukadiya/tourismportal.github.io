@@ -1,3 +1,11 @@
+<?php
+  
+  session_start();
+
+  $_SESSION['currentUrl']="GuideSearch.php";
+  $_SESSION['heading']="Guides";
+  
+ ?>
 <html>
 <head>
 <title>
@@ -5,6 +13,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <style type="text/css">
 	.guide-info{
+		padding-top: 80px;
 		
 	}
 	.guide-info hr{
@@ -48,6 +57,9 @@
 </style>
 </head>
 <body>
+	<?php
+	include '../header.php';
+?>
 <div class="container guide-info">
 			<h1 class="text-center"> Search Guides</h1>
 			<hr>
@@ -77,9 +89,12 @@
 		Available Guides Details
 	</h1> -->
 <?php 
-	include 'Connection.php';
+	include '../Connection.php';
 					
 			if($_SERVER["REQUEST_METHOD"]== "POST"){?>
+			
+			
+			
 			
 					<h1 class="text-center" style="padding: 30px 0;">
 						Available Guides Details
@@ -246,7 +261,7 @@
 							 $sql .="where l.id = t.cityId and t.id in $spotId";
 							  $resCity=$conn->query($sql);
 							  $city="";
-							//  echo $sql;
+							// echo $sql;
 							  while($row = $resCity->fetch_assoc())
 										{
 										

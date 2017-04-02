@@ -262,7 +262,7 @@ print('
                               <ul>
                                     <li><a href="../registerpage/touristForm.php">Tourist register</a></li>
                                     <li><a href="../registerpage/guideRegister.php">Guide register</a></li>
-                                    <li><a href="../registerpage/agencyRegister.html">Agency register</a></li>
+                                    <li><a href="../registerpage/agencyRegister.php">Agency register</a></li>
                                     <li><a href="../registerpages/hotel-form.php">Hotel Register</a></li>
                                     <li><a href="../registerpages/Restaurant-form.php">Restaurant Register</a></li>
                                     <li><a href="../registerpages/local-rent.php">Local Accommodation Register</a></li> 
@@ -271,7 +271,7 @@ print('
 													<li><a>booking</a>
 														<ul>
 															<li><a href="../hotel.php">Accomodation</a></li>
-															<li><a href="../booking.php">Tranport</a></li>
+															<li><a href="../booking.php">Transport</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Contact</a></li>

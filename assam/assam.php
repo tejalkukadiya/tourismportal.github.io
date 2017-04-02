@@ -186,7 +186,7 @@
 											<ul>
 												<li><a href="../registerpages/touristForm.php">Tourist register</a></li>
 												<li><a href="../registerpages/guideRegister.php">Guide register</a></li>
-												<li><a href="../registerpages/agencyRegister.html">Agency register</a></li>
+												<li><a href="../registerpages/agencyRegister.php">Agency register</a></li>
 												<li><a href="../registerpages/hotel-form.php">Hotel Register</a></li>
 												<li><a href="../registerpages/Restaurant-form.php">Restaurant Register</a></li>
 												<li><a href="../registerpages/local-rent.php">Local Accommodation Register</a></li> 
@@ -196,7 +196,7 @@
 										<li><a>booking</a>
 											<ul>
 												<li><a href="../hotel.php">Accomodation</a></li>
-												<li><a href="../booking.php">Tranport</a></li>
+												<li><a href="../booking.php">Transport</a></li>
 											</ul>
 										</li>
 										<li><a href="#">contact</a></li>
@@ -312,7 +312,7 @@
 					               	</div>
 						        	<div class="folio-overview">
 						                    <span class="folio-link"><a class="folio-read-more" href="history.php" ><i class="fa fa-link"></i></a></span>
-						                    <span class="folio-expand" ><a href="../img/portfolio/1.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+						                    </a></span>
 						        	</div>
 						       </div>
 							</div>
@@ -331,7 +331,7 @@
 					                	</div>
 							        	<div class="folio-overview">
 							                    <span class="folio-link"><a class="folio-read-more" href="../hotel.php" ><i class="fa fa-link"></i></a></span>
-							                    <span class="folio-expand"><a href="../images/portfolio/portfolio-details.jpg"><i class="fa fa-search-plus"></i></a></span>
+							                    
 							        	</div>
 							        </div>
 							    </div>
@@ -350,7 +350,7 @@
 					                	</div>
 							        	<div class="folio-overview">
 							                    <span class="folio-link"><a class="folio-read-more" href="../tourism-places.php" ><i class="fa fa-link"></i></a></span>
-							                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg"><i class="fa fa-search-plus"></i></a></span>
+							                    
 							        	</div>
 							        </div>
 							    </div>
@@ -369,7 +369,7 @@
 				                	</div>
 						        	<div class="folio-overview">
 						                    <span class="folio-link"><a class="folio-read-more" href="culture.php" ><i class="fa fa-link"></i></a></span>
-						                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg"><i class="fa fa-search-plus"></i></a></span>
+						                    
 						        	</div>
 						        </div>
 						    </div>
@@ -388,7 +388,7 @@
 				                	</div>
 						        	<div class="folio-overview">
 						                    <span class="folio-link"><a class="folio-read-more" href="festivals.php" ><i class="fa fa-link"></i></a></span>
-						                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg"><i class="fa fa-search-plus"></i></a></span>
+						                    
 						        	</div>
 						        </div>
 						    </div>
@@ -402,12 +402,12 @@
 							<div class="overlay-content">
 								<div class="overlay-text">
 				                 	<div class="folio-info">
-				                    	<h3>restaurants</h3>
+				                    	<h3>Restaurants</h3>
 				                    	<p>more information</p>
 				                	</div>
 						        	<div class="folio-overview">
-						                    <span class="folio-link"><a class="folio-read-more" href="#" ><i class="fa fa-link"></i></a></span>
-						                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg"><i class="fa fa-search-plus"></i></a></span>
+						                    <span class="folio-link"><a class="folio-read-more" href="../registerpages/restaurant-display.php" ><i class="fa fa-link"></i></a></span>
+						                    
 						        	</div>
 						        </div>
 						    </div>

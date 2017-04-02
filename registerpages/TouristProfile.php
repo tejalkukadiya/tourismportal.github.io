@@ -1,8 +1,11 @@
 
 <?php
 	session_start();
+
+  $_SESSION['currentUrl']="TouristProfile.php";
+  $_SESSION['heading']="Profile";
 	$userId=$_SESSION["username"];
-		include 'Connection.php';
+		include '../Connection.php';
 		
 				
 		$res = $conn->query("select * from tourist where touristId = '$userId'");
@@ -77,10 +80,12 @@
 
 </head>
 <body>
-
+	<?php
+	include '../header.php';
+?>
 <div style="margin-left: auto;margin-right: auto;">
 		
-		<form action="TouristProfile.php" method="post" style="width: 500px;margin-left: auto;margin-right: auto;">
+		<form action="TouristProfile.php" method="post" style="width: 500px;margin-left: auto;margin-right: auto;    padding-top: 40px;">
 		
 					<table class="table" style="width: 400px;">
 						<tr>

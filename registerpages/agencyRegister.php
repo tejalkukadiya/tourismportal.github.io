@@ -1,3 +1,11 @@
+<?php
+  
+  session_start();
+
+  $_SESSION['currentUrl']="agencyRegister.php";
+  $_SESSION['heading']="agency-detail";
+  
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +22,9 @@
   
 </head>
 <body>
+	<?php
+	include '../header.php';
+	?>
 	<form method="post" action="Agency.php" class="registerform container">
 		
 

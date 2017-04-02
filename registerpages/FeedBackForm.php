@@ -1,3 +1,11 @@
+<?php
+  
+  session_start();
+
+  $_SESSION['currentUrl']="FeedBackForm.php";
+  $_SESSION['heading']="FeedBack";
+  
+ ?>
 <html>
 <head>
 	<title></title>
@@ -61,7 +69,9 @@
 </head>
 <body>
 
-			
+<?php
+	include '../header.php';
+?>		
 
 <form action="FeedBackProcess.php" method="post">
 <div class="container">

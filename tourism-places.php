@@ -1,3 +1,4 @@
+
 <?php
   
   session_start();
@@ -8,6 +9,7 @@
  ?>
 <?php 
     include_once "breadcrumbs.php";
+    include 'Connection.php';
 ?>
 
 <!DOCTYPE html>
@@ -19,88 +21,108 @@
 	<link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-
-			<?php
-                 include 'header.php';
-            ?>
-			<p style="margin-left: 50px;padding-top: 100px;"><?= breadcrumbs() ?></p>
-
-
-            <div class="container">
-				<div class="row">
-	<div class="col-md-6">
-		<div class="card">
-				  <img class="card-img-top" src="img/IMG_2077-1030x687.jpeg" alt="Card image cap">
-				  <div class="card-block">
-				    <h4 class="card-title">Card title</h4>
-				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.ximus ac. Vestibulum sit amet interdum lorem. Fusce at libero lectus. Quisque sit amet ligula molestie, feugiat velit a, imperdiet lorem. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut rhoncus nisi no</p>
-				    <a href="tourism-places-inside.php" class="btn btn-primary">Go somewhere</a>
-				  </div>
-				</div>
-	</div>
-
-	<div class="col-md-6">
-		<div class="card">
-				  <img class="card-img-top" src="img/IMG_2077-1030x687.jpeg" alt="Card image cap">
-				  <div class="card-block">
-				    <h4 class="card-title">Card title</h4>
-				    <p class="card-text">Some quickome quick example text to build on the card title and make up the bulk of the card's contentome quick example text to build on the card title and make up the bulk of the card's content example text to build on the card title and make up the bulk of the card's content.</p>
-				    <a href="tourism-places-inside.php" class="btn btn-primary">Go somewhere</a>
-				  </div>
-				</div>
-	</div>
-				</div>
-			</div>
-
-
+		<?php
+	include 'header.php';
+?>
 	
-	<footer class="quick-links container" style="background-color: rgba(0,0,0,0.7);  color: white;
-  border-radius: 6px;
-  padding: 42px 76px;
-  margin-top: 10px;">
-		<div class="row">
-			<div class="col-md-4 contact" style="color: rgb(203,203,203);">
-				<h2 style="color: white;">
-					Contact
-				</h2>
-				<p>
-				<span><i class="fa fa-phone"></i></span>
-					telephone: (212)888-77-88<br>
-				<span><i class="fa fa-envelope"></i></span>
-					email: xyz@abc.com<br>
-				<span><i class="fa fa-link"></i></span>
-					website: www.yewsdbgyw.com<br>
+<p style="margin-left: 50px;padding-top: 100px;"><?= breadcrumbs() ?></p>
+
+	<div class="container">
+		<center>
+			<form action="tourism-places.php" method="post" >
+				<h3>Search by</h3>
+				<input type="radio" name="gfilter" value="category">
+				<label for="language" >Category</label>
+				<input type="radio" name="gfilter" value="city" id="city">
+				<label for="city">City</label>		
 				<br>
-				</p>
-			</div>
-			<div class="col-md-4 link-details">
-				<h2 style="margin-left: -56px;"> Quick links </h2>
-				<ul >
-					<li> <a href="#" class="fa fa-angle-right">History</a></li>
-					<li> <a href="#" class="fa fa-angle-right">Guide-register</a></li>
-					<li> <a href="#" class="fa fa-angle-right">Booking</a></li>
-					<li> <a href="#" class="fa fa-angle-right">ContactUs</a></li>
-					<li> <a href="#" class="fa fa-angle-right">AboutUs</a></li>
-				</ul>
-			</div>
-			<div class="col-md-4 news-letter">
-				<h2>
-					For news-letter
-				</h2>
-				<p style="color: rgb(203,203,203);">
-				Sign up for our newsletter for all the 
-				latest news and information
-				</p>
-				<input type="text" name="news-letter" class="form-control"><br>
-				<button type="button" class="btn btn-success">subscribe</button>
-			</div>
+				<input type="text" name="searchkey" class="form-control" style="width: 50%;"> 
+				<input type="submit" name="search" value="Search" class="form-control" style="width: 110px;
+    margin-top: 16px;">
+			</form>
+		</center>
+	
+<div class="row">
+<?php 
+	if($_SERVER["REQUEST_METHOD"]== "POST" && isset($_POST["gfilter"])){											
+		$radio=$_POST["gfilter"];				
+	if(!strcmp($radio,"category")){	
+		$category=$_POST["searchkey"];
+		$resCat=$conn->query("select spotId,spotName,img from touristspotlocationstateview where lower(category)=lower('$category') and state='Assam'");
+		if( mysqli_num_rows($resCat) == 0 )
+		{	  
+			echo "enter valid category";
+			return;				
+		}
+		while($row = $resCat->fetch_assoc()){
+			//echo "in while";
+			$spotId=$row['spotId'];
+			$spotName=$row['spotName'];
+			$img='registerpages/'.$row['img'];
+			//echo $img;
+		?>
+
+		<div class="col-md-6">
+		<div class="card">
+					<img class="card-img-top" src="<?php echo $img;?>" alt="<?php echo $spotName;?>">
+					<div class="card-block">
+				    <h4 class="card-title"><?php echo $spotName;?></h4>
+				    <a href="tourism-places-inside.php?sid=<?php echo $spotId;?>" class="btn btn-primary">Go somewhere</a>
+				  	</div>		
 		</div>
-	</footer>
+		</div>	
 
+		<?php }}
+	else if(!strcmp($radio,"city")){	
+		$city=$_POST["searchkey"];
+		$resCity=$conn->query("select spotId,spotName,img from touristspotlocationstateview where lower(city)=lower('$city') and state='Assam'");
+		if( mysqli_num_rows($resCity) == 0 )
+		{	  
+			echo "enter valid city";
+			return;				
+		}
+		while($row = $resCity->fetch_assoc()){
+			$spotId=$row['spotId'];
+			$spotName=$row['spotName'];
+			$img='registerpages/'.$row['img'];
+			//echo $img;
+		?>
 
+		<div class="col-md-6">
+		<div class="card">
+					<img class="card-img-top" src="<?php echo $img;?>" alt="<?php echo $spotName;?>">
+					<div class="card-block">
+				    <h4 class="card-title"><?php echo $spotName;?></h4>
+				    <a href="tourism-places-inside.php?sid=<?php echo $spotId;?>" class="btn btn-primary">Go somewhere</a>
+				  	</div>		
+		</div>
+		</div>
+		<?php }}
+	}	
+	else{
+		
+		$sql="select spotId,spotName,img from touristspotlocationstateview where state='Assam'";
+		$result=$conn->query($sql);
+		
+		while($row = $result->fetch_assoc()){
+			$spotId=$row['spotId'];
+			$spotName=$row['spotName'];
+			$img='registerpages/'.$row['img'];
+			//echo $img;
+		?>
 
+		<div class="col-md-6">
+		<div class="card">
+					<img class="card-img-top" src="<?php echo $img;?>" alt="<?php echo $spotName;?>">
+					<div class="card-block">
+				    <h4 class="card-title"><?php echo $spotName;?></h4>
+				    <a href="tourism-places-inside.php?sid=<?php echo $spotId;?>" class="btn btn-primary">Go somewhere</a>
+				  	</div>		
+		</div>
+		</div>
 
-
-
+<?php }} ?>
+</div>
+</div>
 </body>
 </html>

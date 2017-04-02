@@ -58,7 +58,7 @@
 					
 					//echo $lid; 
 					//echo $locId;
-				
+				//echo $img;
 			?>
 				<tr>
 					<td>

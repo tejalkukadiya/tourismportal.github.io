@@ -1,6 +1,9 @@
 <?php
 	include '../Connection.php';
 	session_start();
+
+  $_SESSION['currentUrl']="restaurant-edit.php";
+  $_SESSION['heading']="Profile";
 	$username=$_SESSION["username"];
 
 
@@ -61,6 +64,9 @@
 </head>
 
 <body style="overflow-x: hidden;">
+	<?php
+	include '../header.php';
+?>
 <?php
 	
 	$result=$conn->query("select * from restaurant where username='$username' ");
