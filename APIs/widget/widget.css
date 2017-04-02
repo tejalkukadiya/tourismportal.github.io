@@ -20,25 +20,20 @@ MARGIN: 0;
 .weather h3 {
     margin: 10px 0;
     color: #fff;
-    font-size: 29px;
+    font-size: 18px;
 }
 .weather .temp {
     background: rgba(255,255,255,0.8);
     padding: 20px 0 0 0;
 }
 .weather .temp img{
-    
 padding: 0;
-    
 margin: 0;
 }
 .weather .temp h3{
-    
 margin: 0;
-    
-padding: 0;
-    
-font-size: 32px;
+padding: 0; 
+font-size: 20px;
 }
 .weather .temp p {
     padding: 0;

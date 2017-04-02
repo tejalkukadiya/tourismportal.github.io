@@ -251,7 +251,7 @@
 
 
 
-<body>
+<body style="overflow-x: hidden;">
 
 
 	<div id="preloader">
@@ -295,6 +295,7 @@
 								<a href="#">
 								 NORTH-EAST INDIA</a>
 							</h1>
+							<div id="google_translate_element" class="pull-right" style="margin-right: -112px;margin-top: -66px;"></div>
 							<h2>
 								The Perfect Blend of Eight Wonders
 							</h2>
@@ -954,7 +955,12 @@
 
 
 </script>
-
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+	<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 	
 	
