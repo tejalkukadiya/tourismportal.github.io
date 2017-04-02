@@ -507,60 +507,55 @@
 
 					<h2>News Updates</h2>
 
-					<div class="holder hidden">
-  						<ul id="ticker01">
-							<li><span>10/10/2007</span><a href="#">The first thing that most Javascript programmers</a></li>
-							<li><span>10/10/2007</span><a href="#">End up doing is adding some code</a></li>
-							<li><span>10/10/2007</span><a href="#">The code that you want to run</a></li>
-							<li><span>08/10/2007</span><a href="#">Inside of which is the code that you want to run</a></li>
-							<li><span>08/10/2007</span><a href="#">Right when the page is loaded</a></li>
-							<li><span>05/10/2007</span><a href="#">Problematically, however, the Javascript code</a></li>
-							<li><span>04/10/2007</span><a href="#">The first thing that most Javascript programmers</a></li>
-							<li><span>04/10/2007</span><a href="#">End up doing is adding some code</a></li>
-							<li><span>04/10/2007</span><a href="#">The code that you want to run</a></li>
-							<li><span>03/10/2007</span><a href="#">Inside of which is the code that you want to run</a></li>
-							<li><span>03/10/2007</span><a href="#">Right when the page is loaded</a></li>
-							<li><span>01/10/2007</span><a href="#">Problematically, however, the Javascript code</a></li>
-						</ul>
-					</div>
-					<marquee direction="up" scrollamount="8" >
-					<P>	
-										<ul class="news-list">
 					
-										<?php
-							while($row =  $res->fetch_assoc())
-							{
-								$img='registerpages/'.$row["imgurl"];
-								$title=$row["title"];
-								
-					echo '<li><img src="'.$img.'" style="width:300px;height:200px;">
-							<p>'.$title.'</p>
-						</li>';
-					}
-							?>
-							</ul>
-						</P>				
+					<marquee direction="up" scrollamount="8" >
+						<P>	
+											<ul class="news-list">
+						
+											<?php
+								while($row =  $res->fetch_assoc())
+								{
+									$img='registerpages/'.$row["imgurl"];
+									$title=$row["title"];
+									
+						echo '<li><img src="'.$img.'" style="width:300px;height:200px;">
+								<p>'.$title.'</p>
+							</li>';
+						}
+								?>
+								</ul>
+							</P>				
 					</marquee>
+				</div>
+
+
+					
 
 					<div class="tips">
 						<h3>Do's & Donts</h3>
 
 						<ul>
 							<li>Before entering into some North Eastern states like Arunachal Pradesh,
-Manipur, Mizoram and Nagaland, travellers need to have Restricted Area
-Permission or Protected Area Persission.</li>
-							<li>Get medical check-up before traveling to North-east India. Always keep a
-personal first aid box with sufficient mosquito repellent to prevent the mosquito bite</li>
+								Manipur, Mizoram and Nagaland, travellers need to have Restricted Area
+								Permission or Protected Area Persission.</li>
+															<li>Get medical check-up before traveling to North-east India. Always keep a
+								personal first aid box with sufficient mosquito repellent to prevent the mosquito bite</li>
+														<li>Don't ever enter a temple, tomb, dargah or Gurudwara with shoes on and/or
+								scantily dressed.</li>
+								<li>Do not encourage beggars</li>
+								<li>Always drink safe mineral water and take well-cooked food.</li>
+								<li>Don't photograph women without permission. Avoid taking photographs of
+								places (i.e military base, religious place, etc.) where filming is restricted.</li>
 						</ul>
 					</div>
 
 
 					
 
-				</div>
+			</div>
 
 				
-			</div>
+
 		</div>
 
 		<div class="views container animated fadeInRight">

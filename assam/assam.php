@@ -67,7 +67,7 @@
 							<h1>
 								ASSAM
 							</h1>
-							<h3>The Land of Red Rivers and Blue Hills</h3>	
+							<h3>The Land of Rich Heritage Sites</h3>	
 							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
@@ -86,7 +86,7 @@
 							<h1>
 								ASSAM
 							</h1>
-							<h3>The Land of Red Rivers and Blue Hills</h3>	
+							<h3>The Land of One Horned Rhinos</h3>	
 							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="home-slider" style="background-image: url('../img/assam_goalpara.jpg'); display:none;">
+			<div class="home-slider" style="background-image: url('../img/new6.jpg'); display:none;">
 				<div class="whole">
 	          		<div class="hometxt">
 						<div class="left-arrow">
@@ -105,7 +105,7 @@
 							<h1>
 								ASSAM
 							</h1>
-							<h3>The Land of Red Rivers and Blue Hills</h3>	
+							<h3>The Land of Literacy</h3>	
 							<a href="#main">start now</a>
 						</div>
 						<div class="right-arrow">
@@ -197,6 +197,7 @@
 											<ul>
 												<li><a href="../hotel.php">Accomodation</a></li>
 												<li><a href="../booking.php">Transport</a></li>
+												<li><a href="../registerpages/AgencyDisplay.php">Travel package</a></li>
 											</ul>
 										</li>
 										<li><a href="#">contact</a></li>

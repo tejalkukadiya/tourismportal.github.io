@@ -45,7 +45,7 @@
 ?>
     <div class="container culture">
     	<div class="desc">
-	        	<div class="home-slider" style="background-image: url('../img/2.jpg');display:block;">
+	        	<div class="home-slider" style="background-image: url('../img/123.jpg'); display:block;">
 		        	<div class="whole">
 		          		<div class="hometxt">
 							<div class="left-arrow">
@@ -57,7 +57,7 @@
 						</div>
 					</div>
 				</div>
-	        	<div class="home-slider" style="background-image: url('../img/3.jpg'); display:none;">
+	        	<div class="home-slider" style="background-image: url('../img/assam_bihu.jpg'); display:none;">
 		        	<div class="whole">
 		          		<div class="hometxt">
 							<div class="left-arrow">
@@ -69,7 +69,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="home-slider" style="background-image: url('../img/4.jpg'); display:none;">
+				<div class="home-slider" style="background-image: url('../img/women.jpg'); display:none;">
 					<div class="whole">
 		          		<div class="hometxt">
 							<div class="left-arrow">

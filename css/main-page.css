@@ -723,3 +723,10 @@ padding: 0;
 
 }
 .weather-widgets{margin: 178px 0;}
+.tips{padding: 100px 0;text-align: center;}
+.tips h3{padding: 10px;font-size: 28px;}
+.tips li{
+    text-align: initial;
+    font-size: 16px;
+    padding: 4px;
+}
