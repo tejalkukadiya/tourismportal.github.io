@@ -271,7 +271,7 @@ print('
 													<li><a>booking</a>
 														<ul>
 															<li><a href="../hotel.php">Accomodation</a></li>
-															<li><a href="../booking.php">Tranport</a></li>
+															<li><a href="../booking.php">Transport</a></li>
 														</ul>
 													</li>
 													<li><a href="#">Contact</a></li>

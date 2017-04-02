@@ -551,8 +551,10 @@ font-size: 32px;
 margin: 20px 0;
 color: #333;
 }
-.views  .view-data img{border-radius: 50%;width: 170px;}
-.views .view-data{}
+.views  .view-data img{border-radius: 50%;width: 169px;height: 174px;}
+.views .view-data{
+    padding: 10px 104px;
+}
 .views .view-data .quote{
 display: inline-block;
 margin: auto auto;
@@ -675,7 +677,7 @@ h3{
         /* position: absolute; */
         right: 0;
         top: 0;
-        padding: 5px;
+        padding: 8px;
         border: 1px solid #999;
         background: #fff;
       }
@@ -689,6 +691,7 @@ h3{
         margin: 0;
         width: auto;
         overflow-y: auto;
+        margin-right: 74px;
       }
       .train-search li {
         background-color: #f1f1f1;
@@ -709,7 +712,7 @@ h3{
       .train-search{
         height:400px;
         margin: 0;
-        padding: 0;
+        padding: 76px;
       }
 
       .train-map{
